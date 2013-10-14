@@ -62,12 +62,6 @@ rafael@rafael-K55VM ~/aplicacion/php $ git push
 
 Y en la página aparecerán los cambios que hemos realizado.
 
-**Para instalar WordPress...**
-
-Nos metemos en OpenShift, my apps, introducimos login, add aplication, e instalamos WordPress siguiendo las siguientes capturas:
-
-
-![captura 1](https://www.dropbox.com/s/0j6gzso7mbb0yis/captura1.gif)
 
 **Para instalar WordPress...**
 
@@ -80,3 +74,5 @@ Nos metemos en OpenShift, my apps, introducimos login, add aplication, e instala
 ![captura 4](https://www.dropbox.com/s/qdukniednk163h1/captura4.gif)
 ![captura 5](https://www.dropbox.com/s/8q8hs169zqfj94z/captura5.gif)
 ![captura 6](https://www.dropbox.com/s/6o73g4zzbaaomcy/captura%206.gif)
+
+y así tendríamos nuestra aplicación con wordpress instalado y funcionando, aunque en este ejercicio sólo esta última parte era necesaria, la otra es una ampliación que hice, que corresponde con la práctica 1
