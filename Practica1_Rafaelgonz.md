@@ -58,13 +58,13 @@ Para modificar algo en dicho fichero php, lo modificamos y para que se aprecien 
 
 rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.email "rafa_1_9_9_2@hotmail.com"
 
-_rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.name "rafaelgonz"_ 
+          _rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.name "rafaelgonz"_ 
 
-_rafael@rafael-K55VM ~/aplicacion/php $ git commit -a -m 'Some commit message'_ 
-_[master 9b5dfb3] Some commit message_ 
-_1 file changed, 3 insertions(+), 3 deletions(-)_ 
+          _rafael@rafael-K55VM ~/aplicacion/php $ git commit -a -m 'Some commit message'_ 
+          _[master 9b5dfb3] Some commit message_ 
+          _1 file changed, 3 insertions(+), 3 deletions(-)_ 
 
-_rafael@rafael-K55VM ~/aplicacion/php $ git push_
+          _rafael@rafael-K55VM ~/aplicacion/php $ git push_
 
 
 
