@@ -68,7 +68,7 @@ Y en la página aparecerán los cambios que hemos realizado.
 Nos metemos en OpenShift, my apps, introducimos login, add aplication, e instalamos WordPress siguiendo las siguientes capturas:
 
 
-![captura 1](https://www.dropbox.com/s/0j6gzso7mbb0yis/captura1.gif)
+![captura 1](https://dl.dropbox.com/s/0j6gzso7mbb0yis/captura1.gif)
 ![captura 2](https://www.dropbox.com/s/p4tw4e5ihu78e09/captura2.gif)
 ![captura 3](https://www.dropbox.com/s/3qmtxo6od4l10jd/captura3.gif)
 ![captura 4](https://www.dropbox.com/s/qdukniednk163h1/captura4.gif)
