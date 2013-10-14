@@ -62,19 +62,23 @@ rafael@rafael-K55VM ~/aplicacion/php $ git commit -a -m 'Some commit message'
 
 rafael@rafael-K55VM ~/aplicacion/php $ git push
 
+
 Y en la página aparecerán los cambios que hemos realizado.
 
 
-Podemos descargarnos el proyecto en:  https://www.dropbox.com/sh/2mgm744cfpb3no6/fFcA_1SUho
+Podemos descargarnos el proyecto en:  https://www.dropbox.com/home/universidad/iv/PR%C3%81CTICA%201/aplicacion
+
+
 
 
 ###BIBLIOGRAFÍA:
 
-[https://www.openshift.com/get-started]
+https://www.openshift.com/get-started
 
-[https://www.openshift.com/developers/php]
+https://www.openshift.com/developers/php
 
-[https://www.openshift.com/products/architecture]
+https://www.openshift.com/products/architecture
 
-[http://12theory.wordpress.com/2012/12/03/jboss-creacion-de-una-aplicacion-openshift/]
+http://12theory.wordpress.com/2012/12/03/jboss-creacion-de-una-aplicacion-openshift/
+
 
