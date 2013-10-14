@@ -13,7 +13,7 @@ OpenShift se encarga de mantener los servicios subyacentes a la aplicación y la
 
 
 
-Y para ellocomenzamos por:
+Y para ello comenzamos por:
 
 Ir a https://www.openshift.com/, registramos e instalamos los siguientes paquetes en nuestro terminal:
 
@@ -71,7 +71,7 @@ Podemos descargarnos el proyecto en:
 
 El enlace de la aplicación funcionando es:
 
-[aplicacion-rafaelgonz.rhcloud.com Página]
+         aplicacion-rafaelgonz.rhcloud.com
 
 
 ###BIBLIOGRAFÍA:
