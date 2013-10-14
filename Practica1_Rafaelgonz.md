@@ -46,7 +46,7 @@ Una vez creada, podemos visitarla en:
 
 En mi caso, el enlace de la aplicación funcionando es:
 
-         http://aplicacion-rafaelgonz.rhcloud.com
+        [          http://www.aplicacion-rafaelgonz.rhcloud.com](          http://www.aplicacion-rafaelgonz.rhcloud.com)
 
 
 
