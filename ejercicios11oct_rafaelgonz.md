@@ -37,42 +37,26 @@ _Upload now? (yes|no)_
 
 _Please enter a namespace (letters and numbers only) |<none>|: _
 
-Y ya está configurado, ahora sólo falta crear nuestra primera aplicación:
-
-rhc app create aplicacion php-5.3
-
-Y ya está creada, podemos visitarla en:
-
-miaplicacion-mydomain.rhcloud.com
-
-aplicacion-rafaelgonz.rhcloud.com
-
-
-Para modificar algo en dicho fichero php, lo modificamos y para que se aprecien los cambios, realizamos lo siguiente:
-
-rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.email "rafa_1_9_9_2@hotmail.com"
-
-rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.name "rafaelgonz"
-
-rafael@rafael-K55VM ~/aplicacion/php $ git commit -a -m 'Some commit message'
-[master 9b5dfb3] Some commit message
- 1 file changed, 3 insertions(+), 3 deletions(-)
-
-rafael@rafael-K55VM ~/aplicacion/php $ git push
-
-Y en la página aparecerán los cambios que hemos realizado.
-
-
-**Para instalar WordPress...**
+Ahora, para instalar WordPress...
 
 Nos metemos en OpenShift, my apps, introducimos login, add aplication, e instalamos WordPress siguiendo las siguientes capturas:
 
+Pinchamos en WordPress y aceptamos:
 
 ![captura 1](https://dl.dropbox.com/s/0j6gzso7mbb0yis/captura1.gif)
+
+Elegimos la URL que va a tener nuestra aplicación:
+
 ![captura 2](https://dl.dropbox.com/s/p4tw4e5ihu78e09/captura2.gif)
+
+Y creamos la aplicación:
+
 ![captura 3](https://dl.dropbox.com/s/3qmtxo6od4l10jd/captura3.gif)
+
 ![captura 4](https://dl.dropbox.com/s/qdukniednk163h1/captura4.gif)
+
+Y podemos observar como se ha creado nuestra aplicación.
 ![captura 5](https://dl.dropbox.com/s/8q8hs169zqfj94z/captura5.gif)
+
 ![captura 6](https://dl.dropbox.com/s/6o73g4zzbaaomcy/captura%206.gif)
 
-y así tendríamos nuestra aplicación con wordpress instalado y funcionando, aunque en este ejercicio sólo esta última parte era necesaria, la otra es una ampliación que hice, que corresponde con la práctica 1
