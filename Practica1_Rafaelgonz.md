@@ -56,7 +56,7 @@ Para modificar algo en dicho fichero php, lo modificamos y para que se aprecien 
 (Este paso sirve para identificarnos con git, ya que anteriormente en mi caso, usé git para el repositorio de clase, y para que no haya confusión, pide los datos de usuario)
 
 
-_rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.email "rafa_1_9_9_2@hotmail.com"_ 
+rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.email "rafa_1_9_9_2@hotmail.com"
 
 _rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.name "rafaelgonz"_ 
 
