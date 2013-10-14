@@ -71,7 +71,7 @@ Podemos descargarnos el proyecto en:
 
 El enlace de la aplicación funcionando es:
 
-[aplicacion-rafaelgonz.rhcloud.com](aplicacion-rafaelgonz.rhcloud.com)
+[aplicacion-rafaelgonz.rhcloud.com Página]
 
 
 ###BIBLIOGRAFÍA:
