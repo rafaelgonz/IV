@@ -17,14 +17,14 @@ Y para realizar la práctica vamos a usar precisamente OPenShift, y para ello, c
 
 Nos metemos en https://www.openshift.com/ , nos registramos e instalamos los siguientes paquetes en nuestro terminal:
 
-         _sudo apt-get install rubygems_ 
+         sudo apt-get install rubygems 
 
-         _sudo gem install rhc_
+         sudo gem install rhc
 
 
 Y acto seguido, actualizamos para tener la última versión de rhc, el cuál nos ofrecerá la posibilidad de crear nuestra aplicación:
 
-         _sudo	gem update rhc_
+         sudo gem update rhc
 
 Y  nos metemos en  rhc con el usuario y pass que conseguimos en el ejercicio anterior, y nos hace un par de preguntas como:
 
@@ -38,15 +38,15 @@ Please enter a namespace (letters and numbers only) |<none>|:
 
 A las que respondemos dependiendo de nuestros intereses, y  ya está configurado, ahora sólo falta crear nuestra primera aplicación:
 
-         _rhc app create aplicacion php-5.3_
+         rhc app create aplicacion php-5.3
 
 Una vez creada, podemos visitarla en:
 
-         _miaplicacion-mydomain.rhcloud.com_
+         miaplicacion-mydomain.rhcloud.com
 
-En mi caso:
+En mi caso, el enlace de la aplicación funcionando es:
 
-         _aplicacion-rafaelgonz.rhcloud.com_
+         http://aplicacion-rafaelgonz.rhcloud.com
 
 
 
@@ -58,13 +58,13 @@ Para modificar algo en dicho fichero php, lo modificamos y para que se aprecien 
 
 rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.email "rafa_1_9_9_2@hotmail.com"
 
-          _rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.name "rafaelgonz"_ 
+          rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.name "rafaelgonz"
 
-          _rafael@rafael-K55VM ~/aplicacion/php $ git commit -a -m 'Some commit message'_ 
-          _[master 9b5dfb3] Some commit message_ 
-          _1 file changed, 3 insertions(+), 3 deletions(-)_ 
+          rafael@rafael-K55VM ~/aplicacion/php $ git commit -a -m 'Some commit message' 
+          [master 9b5dfb3] Some commit message 
+          1 file changed, 3 insertions(+), 3 deletions(-) 
 
-          _rafael@rafael-K55VM ~/aplicacion/php $ git push_
+          rafael@rafael-K55VM ~/aplicacion/php $ git push
 
 
 
