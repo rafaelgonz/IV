@@ -69,10 +69,10 @@ Nos metemos en OpenShift, my apps, introducimos login, add aplication, e instala
 
 
 ![captura 1](https://dl.dropbox.com/s/0j6gzso7mbb0yis/captura1.gif)
-![captura 2](https://www.dropbox.com/s/p4tw4e5ihu78e09/captura2.gif)
-![captura 3](https://www.dropbox.com/s/3qmtxo6od4l10jd/captura3.gif)
-![captura 4](https://www.dropbox.com/s/qdukniednk163h1/captura4.gif)
-![captura 5](https://www.dropbox.com/s/8q8hs169zqfj94z/captura5.gif)
-![captura 6](https://www.dropbox.com/s/6o73g4zzbaaomcy/captura%206.gif)
+![captura 2](https://dl.dropbox.com/s/p4tw4e5ihu78e09/captura2.gif)
+![captura 3](https://dl.dropbox.com/s/3qmtxo6od4l10jd/captura3.gif)
+![captura 4](https://dl.dropbox.com/s/qdukniednk163h1/captura4.gif)
+![captura 5](https://dl.dropbox.com/s/8q8hs169zqfj94z/captura5.gif)
+![captura 6](https://dl.dropbox.com/s/6o73g4zzbaaomcy/captura%206.gif)
 
 y así tendríamos nuestra aplicación con wordpress instalado y funcionando, aunque en este ejercicio sólo esta última parte era necesaria, la otra es una ampliación que hice, que corresponde con la práctica 1
