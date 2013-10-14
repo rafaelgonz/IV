@@ -2,7 +2,7 @@
 ###Creación y despliegue de una aplicación en un PaaS
 
 
-**OpenShift** es un producto de computación en la nube de plataforma como servicio de Red Hat.
+El PaaS elegido para hacer la práctica es**OpenShift** producto de computación en la nube de plataforma como servicio de Red Hat.
 
 Este software funciona como un servicio que es de código abierto bajo el nombre de "OpenShift Origin", y está disponible en GitHub.
 Los desarrolladores pueden usar Git para desplegar sus aplicaciones Web en los diferentes lenguajes de la plataforma.
@@ -13,9 +13,9 @@ OpenShift se encarga de mantener los servicios subyacentes a la aplicación y la
 
 
 
-Y para realizar la práctica vamos a usar precisamente OPenShift, y para ello, comenzamos por:
+Y para ellocomenzamos por:
 
-Nos metemos en https://www.openshift.com/ , nos registramos e instalamos los siguientes paquetes en nuestro terminal:
+Ir a https://www.openshift.com/, registramos e instalamos los siguientes paquetes en nuestro terminal:
 
          sudo apt-get install rubygems 
 
@@ -26,37 +26,33 @@ Y acto seguido, actualizamos para tener la última versión de rhc, el cuál nos
 
          sudo gem update rhc
 
-Y  nos metemos en  rhc con el usuario y pass que conseguimos en el ejercicio anterior, y nos hace un par de preguntas como:
+Y ejecutamos  rhc con enuestro correo y password. Para conseguir la configuración correcta, nos hace las siguientes preguntas:
 
 
-Your public SSH key must be uploaded to the OpenShift server to access code. 
-Upload now? (yes|no) 
+         Your public SSH key must be uploaded to the OpenShift server to access code. 
+         Upload now? (yes|no) 
 
-Please enter a namespace (letters and numbers only) |<none>|: 
+         Please enter a namespace (letters and numbers only) |<none>|: 
 
 
 
-A las que respondemos dependiendo de nuestros intereses, y  ya está configurado, ahora sólo falta crear nuestra primera aplicación:
+Y en este momento, ya estaría todo configurado, ahora sólo falta crear nuestra primera aplicación:
 
          rhc app create aplicacion php-5.3
 
-Una vez creada, podemos visitarla en:
+Una vez creada, podemos visitar la aplicación por defecto que se habrá creado en:
 
          miaplicacion-mydomain.rhcloud.com
 
-En mi caso, el enlace de la aplicación funcionando es:
-
-[aplicacion-rafaelgonz.rhcloud.com](aplicacion-rafaelgonz.rhcloud.com)
 
 
-
-Para modificar algo en dicho fichero php, lo modificamos y para que se aprecien los cambios, realizamos lo siguiente:
+En este punto, creamos nuestro php, lo subimos a la carpeta php y para que se aprecien los cambios en la web, realizamos lo siguiente:
 
 
 (Este paso sirve para identificarnos con git, ya que anteriormente en mi caso, usé git para el repositorio de clase, y para que no haya confusión, pide los datos de usuario)
 
 
-rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.email "rafa_1_9_9_2@hotmail.com"
+         rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.email "rafa_1_9_9_2@hotmail.com"
 
           rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.name "rafaelgonz"
 
@@ -68,16 +64,14 @@ rafael@rafael-K55VM ~/aplicacion/php $ git config --global user.email "rafa_1_9_
 
 
 
-
-Y en la página aparecerán los cambios que hemos realizado.
-
-
 Podemos descargarnos el proyecto en: 
 
-https://www.dropbox.com/home/universidad/iv/PR%C3%81CTICA%201/aplicacion
+         https://www.dropbox.com/home/universidad/iv/PR%C3%81CTICA%201/aplicacion
 
 
+El enlace de la aplicación funcionando es:
 
+[aplicacion-rafaelgonz.rhcloud.com](aplicacion-rafaelgonz.rhcloud.com)
 
 
 ###BIBLIOGRAFÍA:
