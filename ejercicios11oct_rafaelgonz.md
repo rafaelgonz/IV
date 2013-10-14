@@ -17,25 +17,25 @@ Create a count → https://openshift.redhat.com/app/account/new?__utma=222392261
 
 Para ello, vamos a seguir estos pasos:
 
-https://www.openshift.com/get-started
+    https://www.openshift.com/get-started
 
 
 Instalamos los siguientes paquetes:
 
 sudo apt-get install rubygems
 
-_sudo gem install rhc_
+    sudo gem install rhc
 
 Y actualizamos
 
-_sudo 	gem update rhc_
+    sudo 	gem update rhc
 
 Y  nos metemos en  rhc con el usuario y pass que conseguimos en el ejercicio anterior, y nos hace un par de preguntas como:
 
-_Your public SSH key must be uploaded to the OpenShift server to access code._
-_Upload now? (yes|no)_
+    Your public SSH key must be uploaded to the OpenShift server to access code.
+    Upload now? (yes|no)
+    Please enter a namespace (letters and numbers only) |<none>|: 
 
-_Please enter a namespace (letters and numbers only) |<none>|: _
 
 Ahora, para instalar WordPress...
 
@@ -49,9 +49,11 @@ Elegimos la URL que va a tener nuestra aplicación:
 
 ![captura 2](https://dl.dropbox.com/s/p4tw4e5ihu78e09/captura2.gif)
 
+![captura 3](https://dl.dropbox.com/s/3qmtxo6od4l10jd/captura3.gif)
+
+
 Y creamos la aplicación:
 
-![captura 3](https://dl.dropbox.com/s/3qmtxo6od4l10jd/captura3.gif)
 
 ![captura 4](https://dl.dropbox.com/s/qdukniednk163h1/captura4.gif)
 
