@@ -73,7 +73,8 @@ El enlace de la aplicación funcionando es:
 
          aplicacion-rafaelgonz.rhcloud.com
          
-         ![captura](https://dl.dropbox.com/s/nty23udjhvzn3jx/captura_p1.gif)
+
+![captura](https://dl.dropbox.com/s/nty23udjhvzn3jx/captura_p1.gif)
 
 
 ###BIBLIOGRAFÍA:
