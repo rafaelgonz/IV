@@ -72,6 +72,8 @@ Podemos descargarnos el proyecto en:
 El enlace de la aplicación funcionando es:
 
          aplicacion-rafaelgonz.rhcloud.com
+         
+         ![https://dl.dropbox.com/s/nty23udjhvzn3jx/captura_p1.gif]
 
 
 ###BIBLIOGRAFÍA:
