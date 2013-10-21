@@ -24,6 +24,6 @@ sudo apt-get install bridge-utils
 
 Y miramos:
 
-![https://dl.dropbox.com/s/p96z3ea429xzz3a/cap1.png]
+![captura 1 ] (https://dl.dropbox.com/s/p96z3ea429xzz3a/cap1.png)
 
 2. Para crear una interfaz virtual:
