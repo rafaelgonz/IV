@@ -33,8 +33,6 @@ Donde:
     usuario: ubuntu / password: ubuntu
 
 
-Me ha creado los paquetes:
+Y para ver los paquetes, procedemos con ifconfig -a, donde nos da la siguiente salida:
 
-lxcbr0:
 
-veth:
