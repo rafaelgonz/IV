@@ -35,4 +35,4 @@ Donde:
 
 Y para ver los paquetes, procedemos con ifconfig -a, donde nos da la siguiente salida:
 
-
+![pantallazo3](https://dl.dropbox.com/s/z8cbr5ln2bdxx8p/pantallazo3.jpg)
