@@ -25,7 +25,36 @@ Donde:
 ###Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya.
 
 
+He creado una jaula Centos, siguiendo el siguiente tutorial:
 
+http://www.bonusbits.com/main/HowTo:Setup_CentOS_LXC_Container_on_Ubuntu
+
+He instalado lo siguiente:
+
+    sudo apt-get install librpm3 librpmbuild3 librpmio3 librpmsign1 libsqlite0 python-rpm python-sqlite python-sqlitecachec python-support python-urlgrabber rpm rpm-common rpm2cpio yum debootstrap bridge-utils
+
+Y seguidamente me he descardado el template: https://gist.github.com/hagix9/3514296#file-lxc-centos
+
+
+Al descargarse, realizamos finalmente lo siguiente:
+
+    sudo cp ~/Downloads/lxc-centos /usr/share/lxc/templates/
+
+    sudo chmod +x /usr/share/lxc/templates/lxc-centos
+    
+Creamos la jaula:
+
+    lxc-create -n lxc-centos01 -t centos
+
+![pantallazo7](https://dl.dropbox.com/s/zld9n1vkl9m9dix/pantallazo7.jpg)
+
+
+Y una vez instalada la jaula, arrancamos la jaula y nos identificamos, con password "password"
+
+    lxc-start -n lxc-centos01
+    
+
+![pantallazo8](https://dl.dropbox.com/s/f9x6qm1g24wbeab/pantallazo8.jpg)
 
 
 ##Ejercicio 4 
