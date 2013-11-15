@@ -2,10 +2,28 @@
 
 ###Crear y ejecutar un contenedor basado en Debian.
 
+
+En este apartado, he optado por la instalación de ubuntu:
+    
+    sudo lxc-create -t ubuntu -n una-caja
+    
+    
+Y para entrar a ella, tal y como hemos hecho hasta ahora en este tema:
+    
+    sudo lxc-start -n una-caja
+
+
+Donde:
+
+    usuario: ubuntu / password: ubuntu
+
+![pantallazo2](https://dl.dropbox.com/s/ywr4z2r4epe47bx/pantallazo2.jpg)
+
+
+
 ###Crear y ejecutar un contenedor basado en otra distribución, tal como Fedora.
 ###Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya.
 
-Como debian estaba dando problemas, he instalado 
 
 
 
