@@ -37,21 +37,43 @@ Cambiamos el tipo de tapper con: sudo juju switch local. E instalamos mysql para
 Y para combinarlos...
 
     sudo juju add-relation mediawiki:db mysql
+    juju expose mediawiki 
   
   
 ***
 *   Para realizar esta configuración, pero esta vez utilizando un script, hemos realizado lo siguiente:
 
+Unir todos los pasos realizados en estos ejercicios, secuenciamente en un script, de modo que cuando se ejecute, el resultado sea el mismo:
+
+El script es:
+
         #!/bin/bash
-        juju init -f  
+        juju init
         juju switch local 
         juju bootstrap 
         juju deploy mediawiki
         juju deploy mysql 
         juju add-relation mediawiki:db mysql 
-        juju expose mediawiki #Exponemos el servicio
+        juju expose mediawiki 
         juju status 
     
-Una vez guardado con .sh, cambiamos los permisos, y como superusuario, lo ejecutamos de la siguiente forma:
+Una vez guardado con extensión .sh para ser shell, cambiamos los permisos, y como superusuario, lo ejecutamos de la siguiente forma:
 
     sudo ./script.sh
+    
+
+##Ejercicio 8
+###Instalar libvirt. Te puede ayudar esta guía para Ubuntu.
+
+El paquete libvirt es un API hypervisor independiente de la virtualización que es capaz de interactuar con las capacidades de virtualización de una variedad de sistemas operativos.
+
+El paquete libvirt suministra:
+
+Una capa común, genérica, y estable para gestionar con seguridad máquinas virtuales en un host.
+Una interfaz común para gestionar los sistemas locales y los hosts en red.
+Todas las APIs requeridas para provisionar, crear modificar, monitorizar, controlar, migrar y parar máquinas virtuales, pero sólo si el hypervisor soporta estas operaciones. Aunque se puede acceder a múltiples hosts con libvirt, las APIs están limitadas a operaciones de único nodo.
+
+(http://docs.fedoraproject.org/es-ES/Fedora/18/html/Virtualization_Getting_Started_Guide/sec_libvirt-libvirt-tools.html)
+
+
+Para instalar libvirt:
