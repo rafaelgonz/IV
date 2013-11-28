@@ -90,7 +90,7 @@ Y para comprobar que todo está bien, probamos juju status, donde comprobamos qu
 
 Añadimos otro contenedor, y volvemos a hacer juju status, y comprobamos que ha cambiado, añadiendose este contenedor:
 
-![pantallazo13](https://dl.dropbox.com/s/o6b14kqj0pu22zu/pantallazo10.jpg)
+![pantallazo13](https://dl.dropbox.com/s/nba9lgsxwfrih51/pantallazo13.jpg)
 
 
 
