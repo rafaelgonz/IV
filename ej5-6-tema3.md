@@ -63,7 +63,11 @@ Llegados a este punto, instalamos MongoDB mediante:
       
       sudo apt-get install mongodb-server
       
-E iniciamos mongo con mongod, y creamos el archivo de configuración de juju con:
+E iniciamos mongo con mongod. llegados a este punto, creamos un tapper de la siguiente forma:
+
+      sudo juju bootstrap
+
+y creamos el archivo de configuración de juju con:
 
       juju init
       
@@ -80,9 +84,6 @@ Y para combinarlos...
 
       sudo juju add-relation mediawiki:db mysql
       
-Y llegados a este punto, creamos un tapper de la siguiente forma:
-
-      sudo juju bootstrap
       
 Y para comprobar que todo está bien, probamos juju status, donde comprobamos que todo está bien:
 
