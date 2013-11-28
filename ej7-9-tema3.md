@@ -4,7 +4,7 @@
 ###Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta.
 
 ***
->  Para destruir toda la configuración creada, usamos:
+*   Para destruir toda la configuración creada, usamos:
 
     sudo juju remove-unit mediawiki/0 mysql/0
     
@@ -14,7 +14,7 @@ Esto no borra las máquinas, sólo las unidades, para borrar máquinas, usaríam
     
 
 ***
->  Para el segundo punto, podemos observar nuestro ejercicio6, donde ya realicé otra configuración, pero a modo de resumen, estos son los pasos para realizarlo:
+*   Para el segundo punto, podemos observar nuestro ejercicio6, donde ya realicé otra configuración, pero a modo de resumen, estos son los pasos para realizarlo:
 
 Creamos un contenedor:
 
@@ -40,5 +40,5 @@ Y para combinarlos...
   
   
 ***
-> Para realizar esta configuración, pero esta vez utilizando un script, hemos realizado lo siguiente:
+*   Para realizar esta configuración, pero esta vez utilizando un script, hemos realizado lo siguiente:
 
