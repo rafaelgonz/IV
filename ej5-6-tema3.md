@@ -83,7 +83,7 @@ Cambiamos el tipo de tapper con: sudo juju switch local. E instalamos mysql para
 Y para combinarlos...
 
       sudo juju add-relation mediawiki:db mysql
-      
+      juju expose mediawiki 
       
 Y para comprobar que todo está bien, probamos juju status, donde comprobamos que todo está bien:
 
