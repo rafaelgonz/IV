@@ -3,7 +3,8 @@
 ###Volver a crear la máquina anterior y añadirle mediawiki y una relación entre ellos.
 ###Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta.
 
-***Para destruir toda la configuración creada, usamos:
+***
+1.  Para destruir toda la configuración creada, usamos:
 
     sudo juju remove-unit mediawiki/0 mysql/0
     
@@ -12,7 +13,8 @@ Esto no borra las máquinas, sólo las unidades, para borrar máquinas, usaríam
     sudo juju destroy-machine 2
     
 
-***Para el segundo punto, podemos observar nuestro ejercicio6, donde ya realicé otra configuración, pero a modo de resumen, estos son los pasos para realizarlo:
+***
+2.  Para el segundo punto, podemos observar nuestro ejercicio6, donde ya realicé otra configuración, pero a modo de resumen, estos son los pasos para realizarlo:
 
 Creamos un contenedor:
 
@@ -37,5 +39,6 @@ Y para combinarlos...
     sudo juju add-relation mediawiki:db mysql
   
   
-*** Para realizar esta configuración, pero esta vez utilizando un script, hemos realizado lo siguiente:
+***
+3.  Para realizar esta configuración, pero esta vez utilizando un script, hemos realizado lo siguiente:
 
