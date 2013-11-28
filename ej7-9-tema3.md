@@ -77,3 +77,5 @@ Todas las APIs requeridas para provisionar, crear modificar, monitorizar, contro
 
 
 Para instalar libvirt:
+
+![pantallazo14](https://dl.dropbox.com/s/ny6bpf64x9eebh7/pantallazo14.jpg)
