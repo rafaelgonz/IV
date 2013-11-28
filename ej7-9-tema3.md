@@ -103,3 +103,6 @@ Por lo que instalamos virt-viewer, tal y como nos pide:
 
         sudo apt-get install virt-viewer
         
+Y reiniciamos la instalación y continuamos con la misma:
+
+![pantallazo17](https://dl.dropbox.com/s/jughogd49itdh1j/pantallazo17.jpg.jpg)
