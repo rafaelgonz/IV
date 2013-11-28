@@ -76,6 +76,11 @@ Todas las APIs requeridas para provisionar, crear modificar, monitorizar, contro
 (http://docs.fedoraproject.org/es-ES/Fedora/18/html/Virtualization_Getting_Started_Guide/sec_libvirt-libvirt-tools.html)
 
 
-Para instalar libvirt:
+Para instalar libvirt seguimos los pasos de la guía (https://help.ubuntu.com/12.04/serverguide/libvirt.html):
 
 ![pantallazo14](https://dl.dropbox.com/s/ny6bpf64x9eebh7/pantallazo14.jpg)
+
+
+Una vez instalado, agregamos nuestro usuario al grupo de libvirt:
+
+![pantallazo15](https://dl.dropbox.com/s/mqa54hqwse51ppv/pantallazo15.jpg)
