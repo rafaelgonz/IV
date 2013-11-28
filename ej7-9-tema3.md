@@ -81,6 +81,25 @@ Para instalar libvirt seguimos los pasos de la guía (https://help.ubuntu.com/12
 ![pantallazo14](https://dl.dropbox.com/s/ny6bpf64x9eebh7/pantallazo14.jpg)
 
 
-Una vez instalado, agregamos nuestro usuario al grupo de libvirt:
+Una vez instalado, agregamos nuestro usuario al grupo de libvirt, tal y como nos dice en la guía que hagamos:
 
 ![pantallazo15](https://dl.dropbox.com/s/mqa54hqwse51ppv/pantallazo15.jpg)
+
+
+
+
+##Ejercicio9
+###Instalar un contenedor usando virt-install
+
+Lo primero que hacemos es instalar virt-install, y para ello realizamos lo siguiente:
+
+        sudo apt-get install virtinst
+
+Nos descargamos la imagen de ubuntu server (contenedor que he elegido) y lo guardamos en la carpeta /var/lib/libvirt/images/, y nos disponemos a instalar dicho contenedor:
+
+![pantallazo16](https://dl.dropbox.com/s/t8uwbwkz074ajrq/pantallazo16.jpg)
+
+Por lo que instalamos virt-viewer, tal y como nos pide:
+
+        sudo apt-get install virt-viewer
+        
