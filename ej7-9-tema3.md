@@ -42,3 +42,16 @@ Y para combinarlos...
 ***
 *   Para realizar esta configuración, pero esta vez utilizando un script, hemos realizado lo siguiente:
 
+    #!/bin/bash
+    juju init -f  
+    juju switch local 
+    juju bootstrap 
+    juju deploy mediawiki
+    juju deploy mysql 
+    juju add-relation mediawiki:db mysql 
+    juju expose mediawiki #Exponemos el servicio
+    juju status 
+    
+Una vez guardado con .sh, cambiamos los permisos, y como superusuario, lo ejecutamos de la siguiente forma:
+
+    sudo ./script.sh
