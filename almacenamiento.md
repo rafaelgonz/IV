@@ -10,12 +10,6 @@ Cuyo proceso de instalación, nos lo relataba [Manu Cogolludo](https://twitter.c
 [Instalación linux en portatil Asus k55v](http://osl.ugr.es/2013/10/19/instalar-distro-gnulinux-en-un-asus-modelo-k55v/)
 
 
-###Si tienes acceso en tu escuela o facultad a un ordenador común para las prácticas, ¿qué almacenamiento físico utiliza?
-
-Los ordenadores de la ETSIIT, utilizan 
-
-###Buscar ofertas SAN comerciales y comparar su precio con ofertas locales (en el propio ordenador) equivalentes.
-
 
 ##Ejercicio2
 ###Usar FUSE para acceder a recursos remotos como si fueran ficheros locales. Por ejemplo, sshfs para acceder a ficheros de una máquina virtual invitada o de la invitada al anfitrión.
