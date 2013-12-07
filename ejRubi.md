@@ -64,7 +64,7 @@ Mi código es:
 
         def conexion()
         	response = Net::HTTP.get_response('www.alfinaldelapalmera.com','/')  	
-        	return response['connection'].to_s
+        	return response['content-type'].to_s
         end
 
         def servidor()
@@ -75,7 +75,7 @@ Mi código es:
         puts ('fecha:') 
         puts fecha()
 
-        puts ('ultima conexion:')   
+        puts ('tipo del contenido')   
         puts conexion()
         
         puts ('informacion del servidor:') 
@@ -88,3 +88,19 @@ Y su ejecución es:
 
 ##Ejercicio5
 ###Ver si está disponible Vagrant como una gema de Ruby e instalarla.
+
+Para la instalación de vagrant, en lugar de apt-get utilizamos gem, para que sea gema de ruby, así que la buscaríamos de la siguiente forma:
+	
+		gem search --remote vagrant
+		
+y para instalarla:
+
+		sudo gem install vagrant
+
+Pero nos da error, así que probamos a instalar: 
+
+		sudo apt-get install ruby-dev
+		
+Ahora instalamos, y todo va correctamente, ya que el paquete ruby-dev es necesario para la instalación de lsa gemas de Ruby.
+
+
