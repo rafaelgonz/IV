@@ -35,6 +35,7 @@ Y su salida es:
 
 ![pantallazo1](https://dl.dropbox.com/s/mera0frjialp8re/pantallazo1.png)
 
+
 ##Ejercicio3
 ###¿Se pueden crear estructuras de datos mixtas en Ruby? Crear un array de hashes de arrays e imprimirlo.
 
@@ -44,7 +45,13 @@ Ejemplo:
 
 ![pantallazo2](https://dl.dropbox.com/s/1d0p0a3rcuayc2d/pantallazo2.png)
 
+
 ##Ejercicio4
 ###Crear una serie de funciones instanciadas con un URL que devuelvan algún tipo de información sobre el mismo: fecha de última modificación, por ejemplo. 
 
 ###Pista: esa información está en la cabecera HTTP que devuelve
+
+
+
+##Ejercicio5
+###Ver si está disponible Vagrant como una gema de Ruby e instalarla.
