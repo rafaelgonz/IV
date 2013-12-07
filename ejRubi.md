@@ -51,6 +51,39 @@ Ejemplo:
 
 ###Pista: esa información está en la cabecera HTTP que devuelve
 
+Mi código es:
+
+        #!/usr/bin/ruby
+    
+        require 'net/http'
+
+        def fecha()
+        	response = Net::HTTP.get_response('www.alfinaldelapalmera.com','/')  	
+	        return response['date'].to_s
+        end
+
+        def conexion()
+        	response = Net::HTTP.get_response('www.alfinaldelapalmera.com','/')  	
+        	return response['connection'].to_s
+        end
+
+        def servidor()
+	        response = Net::HTTP.get_response('www.alfinaldelapalmera.com','/')  	
+	        return response['server'].to_s
+        end
+
+        puts ('fecha:') 
+        puts fecha()
+
+        puts ('ultima conexion:')   
+        puts conexion()
+        
+        puts ('informacion del servidor:') 
+        puts servidor()
+
+Y su ejecución es:
+
+![pantallazo3](https://dl.dropbox.com/s/9agkprllf5j3z55/pantallazo3.png)
 
 
 ##Ejercicio5
