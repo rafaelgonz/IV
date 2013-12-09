@@ -68,9 +68,16 @@ Y creamos la imagen, tal y como vemos en el guión de prácticas:
 ![pantallazo3](https://dl.dropbox.com/s/0a66otk63ycqj2n/pantallazo3.png)
 
 
-Para ver estas imagenes, podríamos hacer:
+Para ver estas imagenes, podríamos montarlas con:
+
+        mount -o loop,offset=32256 /camino/a/fichero-suelto.img
+        /mnt/mountpoint
+
+Y:
 
         modprobe nbd max_part=16
         qemu-nbd -c /dev/nbd0 fichero-cow.qcow2
         partprobe /dev/nbd0
         mount /dev/nbd0p1 /mnt/image
+        
+(PRÓXIMAMENTE)
