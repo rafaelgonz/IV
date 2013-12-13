@@ -80,4 +80,7 @@ Y:
         partprobe /dev/nbd0
         mount /dev/nbd0p1 /mnt/image
         
-(PRÓXIMAMENTE)
+##Ejercicio4
+###Crear uno o varios sistema de ficheros en bucle usando un formato que no sea habitual (xfs o btrfs) y comparar las prestaciones de entrada/salida entre sí y entre ellos y el sistema de ficheros en el que se encuentra, para comprobar el overhead que se añade mediante este sistema
+
+
