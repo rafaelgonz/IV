@@ -83,6 +83,10 @@ Y:
 ##Ejercicio4
 ###Crear uno o varios sistema de ficheros en bucle usando un formato que no sea habitual (xfs o btrfs) y comparar las prestaciones de entrada/salida entre sí y entre ellos y el sistema de ficheros en el que se encuentra, para comprobar el overhead que se añade mediante este sistema
 
+Para instalar xfs:
+        
+        apt-get install xfsprogs
+        
 
 
 ##Ejercicio5
@@ -95,6 +99,45 @@ Para instalarlo, realizamos:
 
 ##Ejercicio6
 ###Crear un dispositivo ceph usando BTRFS o XFS
-###
 
+Lo primero que tenemos que hacer, es instalar los paquetes:
 
+    sudo apt-get install ceph-mds
+    
+Y creamos los directorios donde se va a almacenar la información de CEPH
+
+    mkdir -p /srv/ceph/{osd,mon,mds}
+    
+Y creamos un fichero de configuración, en:
+
+    /etc/ceph/ceph.conf:
+
+    [global]
+	    log file = /var/log/ceph/$name.log 
+	    pid file = /var/run/ceph/$name.pid 
+    [mon]
+    	mon data = /srv/ceph/mon/$name 
+    [mon.rafa] 
+    	host = 127.0.0.1
+    	mon addr = 127.0.0.1:6789 
+    [mds] 
+    [mds.rafa] 
+    	host = 127.0.0.1
+    [osd] 
+    	osd data = /srv/ceph/osd/$name 
+    	osd journal = /srv/ceph/osd/$name/journal 
+    	osd journal size = 1000 ; journal size, in megabytes 
+    [osd.0] 
+    	host = 127.0.0.1
+	    devs = /dev/loop0
+
+            
+Y ahora realizamos lo siguiente:
+        
+     sudo mkdir /srv/ceph/osd/osd.0
+     
+Y creamos el sistema de ficheros:
+
+    sudo /sbin/mkcephfs -a -c /etc/ceph/ceph.conf 
+    
+Nos daba error, por lo que instalamos ssh, y nos pide la contraseña de root
