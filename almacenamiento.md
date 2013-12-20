@@ -83,10 +83,29 @@ Y:
 ##Ejercicio4
 ###Crear uno o varios sistema de ficheros en bucle usando un formato que no sea habitual (xfs o btrfs) y comparar las prestaciones de entrada/salida entre sí y entre ellos y el sistema de ficheros en el que se encuentra, para comprobar el overhead que se añade mediante este sistema
 
-Para instalar xfs:
-        
-        apt-get install xfsprogs
-        
+Lo primero que vamos a realizar, es crear las imagenes con qemu, tal y como hicimos en el ejercicio anterior, con xfs:
+
+	qemu-img create -f raw xfs.img 5M
+	
+Y lo convertimos en sistema de ficheros en bucle:
+
+	sudo losetup -v -f xfs.img
+	
+Le damos formato:
+
+	sudo mkfs.xfs /dev/loop1
+	
+Y lo montamos para terminar:
+
+	sudo mount /dev/loop0 /mnt/loop1/
+
+Y lo comprobamos:
+
+![pantallazo4](https://dl.dropbox.com/s/025svayigsqxxza/pantallazo4.png)
+
+	
+Comprobamos la gran velocidad, y buen funcionamiento que presentan los ficheros en bucle, al copiar archivos en el.
+
 
 
 ##Ejercicio5
@@ -113,26 +132,30 @@ Y creamos un fichero de configuración, en:
     /etc/ceph/ceph.conf:
 
     [global]
-	    log file = /var/log/ceph/$name.log 
-	    pid file = /var/run/ceph/$name.pid 
+    	auth cluster required = none
+    	auth service required = none
+    	auth client required = none
+    	auth supported = none
+    	log file = /var/log/ceph/$name.log
+    	pid file = /var/run/ceph/$name.pid
     [mon]
-    	mon data = /srv/ceph/mon/$name 
-    [mon.rafa] 
-    	host = 127.0.0.1
-    	mon addr = 127.0.0.1:6789 
-    [mds] 
-    [mds.rafa] 
-    	host = 127.0.0.1
-    [osd] 
-    	osd data = /srv/ceph/osd/$name 
-    	osd journal = /srv/ceph/osd/$name/journal 
-    	osd journal size = 1000 ; journal size, in megabytes 
-    [osd.0] 
-    	host = 127.0.0.1
-	    devs = /dev/loop0
+    	mon data = /srv/ceph/mon/$name
+    [mon.rafa]
+    	host = rafael-K55VM
+    	mon addr = 127.0.0.1:6789
+    [mds]
+    [mds.rafa]
+	 host = rafael-K55VM
+    [osd]
+    	osd data = /srv/ceph/osd/$name
+    	osd journal = /srv/ceph/osd/$name/journal
+    	osd journal size = 1000
+    [osd.0]
+	 host = rafael-K55VM
+	 xfs devs = /dev/loop0
 
-            
-Y ahora realizamos lo siguiente:
+ 
+Aprobechamos el fichero en bucle del ejercicio 4, y realizamos lo siguiente:
         
      sudo mkdir /srv/ceph/osd/osd.0
      
