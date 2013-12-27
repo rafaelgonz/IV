@@ -164,3 +164,47 @@ Y creamos el sistema de ficheros:
     sudo /sbin/mkcephfs -a -c /etc/ceph/ceph.conf 
     
 Nos daba error, por lo que instalamos ssh, y nos pide la contraseña de root
+
+##Ejercicio7
+###Almacenar objetos y ver la forma de almacenar directorios completos usando ceph y rados.
+
+Para trabajar con rados, lo primero que debemos hacer es crear la piscina:
+
+	rados mkpool ejercicio7
+
+Para comprobar lo que hay, utilizamos:
+
+	rados df
+
+Y comprobamos que está vacio, por lo que vamos a introducir una de las imagenes creadas en los ejercicios anteriores mediante:
+
+	rados put -p ejercicio7 objeto xfs.img
+
+Y lo listamos, para comprobar que se ha creado:
+
+	rados ls -p prueba-piscina
+	
+	
+##Ejercicio8
+###Tras crear la cuenta de Azure, instalar las herramientas de línea de órdenes (Command line interface, cli) del mismo y configurarlas con la cuenta Azure correspondiente.
+
+Siguiendo el tutorial presentado en el enunciado, instalamos node.js, añadiendo el repositorio correspondiente:
+
+![pantallazo5](https://dl.dropbox.com/s/82m42priqzhvfn2/pantallazo5.png)
+
+E instalamos:
+
+	sudo apt-get install nodejs
+	
+Llegados a este punto, tenemos que instalar Windows Azure Cross-Platform Command-Line Interface:
+	
+	npm install azure-cli
+
+![pantallazo6](https://dl.dropbox.com/s/2d7fordxhx5w9ak/pantallazo6.png)
+
+
+Una vez instalado, tenemos que descargar nuestra configuración de cuenta de azure, mediante:
+
+	azure account download
+	
+
