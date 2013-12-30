@@ -203,8 +203,64 @@ Llegados a este punto, tenemos que instalar Windows Azure Cross-Platform Command
 ![pantallazo6](https://dl.dropbox.com/s/2d7fordxhx5w9ak/pantallazo6.png)
 
 
-Una vez instalado, tenemos que descargar nuestra configuración de cuenta de azure, mediante:
+Una vez instalado, nos vamos a http://go.microsoft.com/fwlink/?LinkId=254432 y hacemos login. Se descargará un archivo, gracias al cuál podemos  seguir con el ejercicio.
 
-	azure account download
+Y lo importamos:
+
+	azure account import ~/Azpad245GZK8973-12-30-2013-credentials.publishsettings
 	
+![pantallazo7](https://dl.dropbox.com/s/j1aknrqvp3bbkfi/pantallazo7.png)
+
+
+Para comprobar que hemos importado nuestra cuenta, listamos:
+
+	azure account list
+	
+![pantallazo8](https://dl.dropbox.com/s/n1zwshudsp9evcv/pantallazo8.png)
+
+	
+Una vez llegados a este punto, vamos a crear una cuenta de almacenamiento, y para ello:
+
+	azure account storage create rafaelgonz
+	azure account storage keys list rafaelgonz
+	
+	export AZURE_STORAGE_ACCOUNT=rafaelgonz
+	export AZURE_STORAGE_ACCESS_KEY=*
+	echo $AZURE_STORAGE_ACCOUNT
+	echo $AZURE_STORAGE_ACCESS_KEY
+
+*La llave nos la da azure account storage keys list rafaelgonz
+
+![pantallazo9](https://dl.dropbox.com/s/j8nss7rnkkku4ks/pantallazo9.png)
+
+
+
+##Ejercicio9
+###Crear varios contenedores en la cuenta usando la línea de órdenes para ficheros de diferente tipo y almacenar en ellos las imágenes en las que capturéis las pantallas donde se muestre lo que habéis hecho.
+
+Vamos a crear un contenedor para imágenes:
+
+	azure storage container create imagenes -p blob
+	
+
+Y ahora vamos a subir una imágen a dicho contenedor, mediante:
+
+	azure storage blob upload ~/Documentos/Imágenes/banda.jpg
+	
+![pantallazo10](https://dl.dropbox.com/s/gskg7b0e9tu8jot/pantallazo10.png)
+
+Y con esto, hemos subido archivos a la cuenta realizada en el ejercicio anterior.
+
+
+
+##Ejercicio10
+###Desde un programa en Ruby o en algún otro lenguaje, listar los blobs que hay en un contenedor, crear un fichero con la lista de los mismos y subirla al propio contenedor. Muy meta todo.
+
+
+Instalamos el gem de ruby para azure:
+
+![pantallazo11](https://dl.dropbox.com/s/laju1tmfeofzk3q/pantallazoej10.png)
+
+
+Y realizamos el siguiente código:
 
