@@ -181,15 +181,17 @@ Y finalmente, creamos el directorio, donde vamos a montar el dispositivo:
 
 Para trabajar con rados, lo primero que debemos hacer es crear la piscina:
 
-	rados mkpool ejercicio7
+	sudo rados mkpool ejercicio7
 
 Para comprobar lo que hay, utilizamos:
 
-	rados df
+	sudo rados df
+
+![pantallazo14](https://dl.dropbox.com/s/k4v2qtmaxkcau6d/pantallazo14.png)
 
 Y comprobamos que está vacio, por lo que vamos a introducir una de las imagenes creadas en los ejercicios anteriores mediante:
 
-	rados put -p ejercicio7 objeto xfs.img
+	sudo rados put -p ejercicio7 objeto ceph_ej6.img
 
 Y lo listamos, para comprobar que se ha creado:
 
@@ -275,3 +277,29 @@ Instalamos el gem de ruby para azure:
 
 Y realizamos el siguiente código:
 
+	#!/usr/bin/ruby
+
+	require "azure"
+
+	azure_blob_service = Azure::BlobService.new
+	containers = azure_blob_service.list_containers()
+
+	containers.each do |container|
+    		name = container.name + ".txt"
+
+		File.open(name, "w") do |list|
+
+        		list.puts container.name + ":"
+        		list.puts "=" * container.name.length
+
+			blobs = azure_blob_service.list_blobs(container.name)
+
+        		blobs.each do |blob|
+            			list.puts "\t" + blob.name
+        		end
+    		end
+
+    		content = File.open(name, "rb") { |file| file.read }
+    		blob = azure_blob_service.create_block_blob(container.name, name, content)
+
+	end
