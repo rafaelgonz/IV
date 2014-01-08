@@ -113,7 +113,7 @@ Comprobamos la gran velocidad, y buen funcionamiento que presentan los ficheros 
 
 Para instalarlo, realizamos:
 
-        sudo apt-get install ceph-mds
+![pantallazo](https://dl.dropbox.com/s/b433mf5tvhuazst/pantallazo11.png)
 
 
 ##Ejercicio6
@@ -121,45 +121,62 @@ Para instalarlo, realizamos:
 
 Lo primero que tenemos que hacer es crear los directorios donde se va a almacenar la información de CEPH
 
-    mkdir -p /srv/ceph/{osd,mon,mds}
+    sudo mkdir -p /srv/ceph/{osd,mon,mds}
     
 Y creamos un fichero de configuración, en:
 
     /etc/ceph/ceph.conf:
 
     [global]
-    	auth cluster required = none
+	auth cluster required = none
     	auth service required = none
     	auth client required = none
     	auth supported = none
     	log file = /var/log/ceph/$name.log
-    	pid file = /var/run/ceph/$name.pid
+    pid file = /var/run/ceph/$name.pid
     [mon]
-    	mon data = /srv/ceph/mon/$name
-    [mon.rafa]
-    	host = rafael-K55VM
-    	mon addr = 127.0.0.1:6789
+	 mon data = /srv/ceph/mon/$name
+    [mon.gpc]
+	 host = ubuntu
+	 mon addr = 127.0.0.1:6789
     [mds]
-    [mds.rafa]
-	 host = rafael-K55VM
+    [mds.gpc]
+	 host = ubuntu
     [osd]
-    	osd data = /srv/ceph/osd/$name
-    	osd journal = /srv/ceph/osd/$name/journal
-    	osd journal size = 1000
+	 osd data = /srv/ceph/osd/$name
+	 osd journal = /srv/ceph/osd/$name/journal
+	 osd journal size = 1000
     [osd.0]
-	 host = rafael-K55VM
+	 host = ubuntu
 	 xfs devs = /dev/loop0
 
  
-Aprobechamos el fichero en bucle del ejercicio 4, y realizamos lo siguiente:
-        
+Creamos un fichero en bucle igual al del ejercicio 4, y realizamos lo siguiente:
+    
+     qemu-img create -f raw ceph_osd.img 2G
+     sudo losetup -v -f ceph_osd.img
+     sudo mkfs.xfs /dev/loop0
+   
+Y:
+
      sudo mkdir /srv/ceph/osd/osd.0
      
 Y creamos el sistema de ficheros:
 
     sudo /sbin/mkcephfs -a -c /etc/ceph/ceph.conf 
     
-Nos daba error, por lo que instalamos ssh, y nos pide la contraseña de root
+![pantallazo12](https://dl.dropbox.com/s/yeqfn2mo6znmviy/pantallazo12.png)
+
+Una vez llegados a este punto, iniciamos el servicio:
+
+	sudo /etc/init.d/ceph -a start
+	
+Y finalmente, creamos el directorio, donde vamos a montar el dispositivo:
+
+	sudo mkdir /mnt/ceph
+	sudo mount -t ceph germaaan-pc:/ /mnt/ceph
+	df
+
 
 ##Ejercicio7
 ###Almacenar objetos y ver la forma de almacenar directorios completos usando ceph y rados.
