@@ -128,19 +128,15 @@ Y creamos un fichero de configuración, en:
     /etc/ceph/ceph.conf:
 
     [global]
-	auth cluster required = none
-    	auth service required = none
-    	auth client required = none
-    	auth supported = none
     	log file = /var/log/ceph/$name.log
-    pid file = /var/run/ceph/$name.pid
+	pid file = /var/run/ceph/$name.pid
     [mon]
 	 mon data = /srv/ceph/mon/$name
-    [mon.gpc]
+    [mon.rafa]
 	 host = ubuntu
 	 mon addr = 127.0.0.1:6789
     [mds]
-    [mds.gpc]
+    [mds.rafa]
 	 host = ubuntu
     [osd]
 	 osd data = /srv/ceph/osd/$name
@@ -153,8 +149,8 @@ Y creamos un fichero de configuración, en:
  
 Creamos un fichero en bucle igual al del ejercicio 4, y realizamos lo siguiente:
     
-     qemu-img create -f raw ceph_osd.img 2G
-     sudo losetup -v -f ceph_osd.img
+     qemu-img create -f raw ceph_ej6.img 2G
+     sudo losetup -v -f ceph_ej6.img
      sudo mkfs.xfs /dev/loop0
    
 Y:
@@ -170,12 +166,14 @@ Y creamos el sistema de ficheros:
 Una vez llegados a este punto, iniciamos el servicio:
 
 	sudo /etc/init.d/ceph -a start
+
+Y vemos el status de ceph:
+
+![pantallazo13](https://dl.dropbox.com/s/ihdzvcqw4neahmy/pantallazo13.png)
 	
 Y finalmente, creamos el directorio, donde vamos a montar el dispositivo:
 
-	sudo mkdir /mnt/ceph
-	sudo mount -t ceph germaaan-pc:/ /mnt/ceph
-	df
+	sudo mount -t ceph ubuntu:/ /mnt/ceph
 
 
 ##Ejercicio7
