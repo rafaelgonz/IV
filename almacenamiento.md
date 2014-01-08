@@ -278,7 +278,6 @@ Instalamos el gem de ruby para azure:
 Y realizamos el siguiente código:
 
 	#!/usr/bin/ruby
-
 	require "azure"
 
 	azure_blob_service = Azure::BlobService.new
