@@ -113,17 +113,13 @@ Comprobamos la gran velocidad, y buen funcionamiento que presentan los ficheros 
 
 Para instalarlo, realizamos:
 
-        sudo apt-get install ceph
+        sudo apt-get install ceph-mds
 
 
 ##Ejercicio6
 ###Crear un dispositivo ceph usando BTRFS o XFS
 
-Lo primero que tenemos que hacer, es instalar los paquetes:
-
-    sudo apt-get install ceph-mds
-    
-Y creamos los directorios donde se va a almacenar la información de CEPH
+Lo primero que tenemos que hacer es crear los directorios donde se va a almacenar la información de CEPH
 
     mkdir -p /srv/ceph/{osd,mon,mds}
     
