@@ -7,4 +7,4 @@
 ###Se pueden usar tanto máquinas virtuales locales como máquinas en la nube como una combinación de ambas si se considera necesario. De la misma forma, se puede usar sólo una, o bien varias máquinas virtuales si se ve que por temas de seguridad o cualquier otro es más conveniente.
 
 
-Para la realización de esta práctica, he utilizado VMWare Player, servicio gratuito  multiplataforma que permite fácilmente crear máquinas virtuales y cambiar  sus 
+Me he atrevido a hacer la práctica, con máquinas virtuales en azure, pero tengo la limitación que sólo puedo tener creada una, así que voy a tener que ir creando/eliminando máquinas virtuales, pero no importa, ya que es muchísimo mas útil, 
