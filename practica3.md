@@ -316,7 +316,7 @@ Hasta ahora, los tiempos han sido mejores los de ubuntu 12.04, así que vamos a 
           95%      2
           98%      2
           99%      3
- 100%     17 (longest request)
+          100%     17 (longest request)
 
 
 ###5º PRUEBA
@@ -447,3 +447,151 @@ Hasta ahora, los tiempos han sido mejores los de ubuntu 12.04, así que vamos a 
          100%    275 (longest request)
          
 El tiempo empleado es mayor por lo que no seguimos probando con este tipo de configuración.
+
+
+###6º PRUEBA
+    
+    S.O -> Ubuntu server 13.04
+    Configuración: 2 núcleos,  3.75 GB
+    
+    
+        azureuser@ivubuntu7:~/Practicas/Practica2$ ab -n 1000 -c 5 http://127.0.0.1/calculadora/calculadora.php
+        This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+        Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+        Licensed to The Apache Software Foundation, http://www.apache.org/
+        
+        Benchmarking 127.0.0.1 (be patient)
+        Completed 100 requests
+        Completed 200 requests
+        Completed 300 requests
+        Completed 400 requests
+        Completed 500 requests
+        Completed 600 requests
+        Completed 700 requests
+        Completed 800 requests
+        Completed 900 requests
+        Completed 1000 requests
+        Finished 1000 requests
+        
+        
+        Server Software:        Apache/2.2.22
+        Server Hostname:        127.0.0.1
+        Server Port:            80
+        
+        Document Path:          /calculadora/calculadora.php
+        Document Length:        3109 bytes
+        
+        Concurrency Level:      5
+        Time taken for tests:   0.218 seconds
+        Complete requests:      1000
+        Failed requests:        0
+        Write errors:           0
+        Total transferred:      3339000 bytes
+        HTML transferred:       3109000 bytes
+        Requests per second:    4593.60 [#/sec] (mean)
+        Time per request:       1.088 [ms] (mean)
+        Time per request:       0.218 [ms] (mean, across all concurrent requests)
+        Transfer rate:          14978.56 [Kbytes/sec] received
+        
+        Connection Times (ms)
+                      min  mean[+/-sd] median   max
+        Connect:        0    0   0.2      0       1
+        Processing:     0    1   0.5      1       8
+        Waiting:        0    1   0.5      1       6
+        Total:          0    1   0.6      1       8
+        
+        Percentage of the requests served within a certain time (ms)
+          50%      1
+          66%      1
+          75%      1
+          80%      1
+          90%      2
+          95%      2
+          98%      3
+          99%      3
+         100%      8 (longest request)
+
+
+
+
+###7º PRUEBA
+
+    S.O -> centOS
+    Configuración: 2 núcleos,  3.75 GB
+    
+Su instalación, es un poco diferente a las ubuntu:
+
+-PANTALLAZO 11
+
+-PANTALLAZO 12
+
+-PANTALLAZO 13
+
+Nos conectamos por ssh e instalamos apache mediante: yum install httpd
+
+y repetimos los pasos tradicionales hasta poder ejecutar a.b:
+
+
+        [azureuser@centos1 Practica2]$ ab -n 1000 -c 5 http://127.0.0.1/calculadora/calculadora.php
+        This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+        Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+        Licensed to The Apache Software Foundation, http://www.apache.org/
+        
+        Benchmarking 127.0.0.1 (be patient)
+        Completed 100 requests
+        Completed 200 requests
+        Completed 300 requests
+        Completed 400 requests
+        Completed 500 requests
+        Completed 600 requests
+        Completed 700 requests
+        Completed 800 requests
+        Completed 900 requests
+        Completed 1000 requests
+        Finished 1000 requests
+        
+        
+        Server Software:        Apache/2.2.15
+        Server Hostname:        127.0.0.1
+        Server Port:            80
+        
+        Document Path:          /calculadora/calculadora.php
+        Document Length:        300 bytes
+        
+        Concurrency Level:      5
+        Time taken for tests:   0.229 seconds
+        Complete requests:      1000
+        Failed requests:        0
+        Write errors:           0
+        Non-2xx responses:      1000
+        Total transferred:      480000 bytes
+        HTML transferred:       300000 bytes
+        Requests per second:    4364.26 [#/sec] (mean)
+        Time per request:       1.146 [ms] (mean)
+        Time per request:       0.229 [ms] (mean, across all concurrent requests)
+        Transfer rate:          2045.75 [Kbytes/sec] received
+        
+        Connection Times (ms)
+                      min  mean[+/-sd] median   max
+        Connect:        0    0   0.2      0       2
+        Processing:     0    1   0.3      1       2
+        Waiting:        0    0   0.2      0       2
+        Total:          0    1   0.5      1       3
+        
+        Percentage of the requests served within a certain time (ms)
+          50%      1
+          66%      1
+          75%      2
+          80%      2
+          90%      2
+          95%      2
+          98%      3
+          99%      3
+         100%      3 (longest request)
+
+
+Así, que terminadas todas las pruebas, tenemos los siguientes datos:
+
+
+
+
