@@ -37,23 +37,23 @@ Dicho esto, la batería de pruebas es la siguiente:
     Configuración: 1 núcleo,  1.75 GB
     
 
--PANTALLAZO 1
+![pantallazo1](https://dl.dropbox.com/s/slczqwql5e7bhpb/pantallazo1.png)
 
--PANTALLAZO 2
+![pantallazo2](https://dl.dropbox.com/s/er35p8fouijqafh/pantallazo2.png)
 
 Nos conectamos mediante SSH:
 
--PANTALLAZO 3
+![pantallazo3](https://dl.dropbox.com/s/bweeonagdgy06h5/pantallazo3.png)
 
 Ahora instalamos apache y git, tal y como hemos explicado al principio de esta práctica, y nos descargamos el repositorio de prácticas, para tener la aplicación que vamos a probar:
 
 
 
--pantallazo 4
+![pantallazo4](https://dl.dropbox.com/s/f4ej2b24ms6tau1/pantallazo4.png)
 
 y movemos los ficheros en cuestión a /var/www/ y mediante curl, comprobamos la página php:
 
--pantallazo 5
+![pantallazo5](https://dl.dropbox.com/s/fm9jdyzkovsfv43/pantallazo5.png)
 
 Y ya sólo falta...
 
