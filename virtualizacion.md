@@ -24,16 +24,18 @@ Lo primero que hay que hacer es activar el módulo del kernel de VKM:
 
     sudo modprobe kvm-intel
     
-Vamos a instalar CoreOS, por el poco espacio que ocupa, tal y como nos indíca el enunciado, mediante:
+Vamos a instalar ubuntu server 12.04 por el buen resultado que me dió en la pŕactica 3:
 
+Nos bajamos la imágen y:
 
-![pantallazo2](https://dl.dropbox.com/s/f0xpgi6kcmx53r3/pantallazo2.png)
+![PANTALLAZO 3](https://dl.dropbox.com/s/vsdvim8p50mblwl/pantallazo3.png)
 
-y
-
-    chmod +x coreos_production_qemu.sh
-    bunzip2 coreos_production_qemu_image.img.bz2
-    
+Instalamos vmm y realizamos la instalación:
 
 
 ###2. Hacer un ejercicio equivalente usando otro hipervisor como Xen, VirtualBox o Parallels.
+
+
+
+
+
