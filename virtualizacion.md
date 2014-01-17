@@ -24,16 +24,19 @@ Lo primero que hay que hacer es activar el módulo del kernel de VKM:
 
     sudo modprobe kvm-intel
     
-Vamos a instalar ubuntu server 12.04 por el buen resultado que me dió en la pŕactica 3:
+Vamos crear el disco:
 
-Nos bajamos la imágen y:
+    qemu-img create -f qcow qcow2_disc.img 2G
 
-![PANTALLAZO 3](https://dl.dropbox.com/s/vsdvim8p50mblwl/pantallazo3.png)
-
-Instalamos vmm y realizamos la instalación:
 
 
 ###2. Hacer un ejercicio equivalente usando otro hipervisor como Xen, VirtualBox o Parallels.
+
+Instalamos VirtualBox con:
+    
+    apt-get install virtualbox
+    
+Abrimos la aplicación, y vamos a instalar ubuntu server 12.04, en homanaje al gran resultado que obtube con esta versión en la pasada práctica 3:
 
 
 
