@@ -69,6 +69,9 @@ Y finalmente añadimos la ISO:
 
 ![pantallazo8](https://dl.dropbox.com/s/z3no3jywx6snjfa/pantallazo8.png)
 
+Para terminar, ejecutamos nuestra máquina virtual:
+
+![pantallazo9](https://dl.dropbox.com/s/qyqljhy4f7zc308/pantallazo9.png)
 
 
 
