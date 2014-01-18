@@ -107,3 +107,13 @@ Instalamos una máquina ubuntu server 12-04 mediante Virtual Box
 Lo siguiente es instalar nginx:
 
     sudo apt-get install nginx
+    
+Y accedemos a la página por defecto que tiene nginx:
+
+![pantallazo12](https://dl.dropbox.com/s/lsysdnrwmqxwciv/pantallazo12.png)
+
+
+##Ejercicio6
+###Usar juju para hacer el ejercicio anterior.
+
+
