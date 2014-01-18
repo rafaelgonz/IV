@@ -20,13 +20,34 @@ Una vez comprobado esto, vamos a instalar los paquetes necesarios, mediante:
 ##Ejercicios 2
 ###1. Crear varias máquinas virtuales con algún sistema operativo libre, Linux o BSD. Si se quieren distribuciones que ocupen poco espacio con el objetivo principalmente de hacer pruebas se puede usar CoreOS (que sirve como soporte para Docker) GALPon Minino, hecha en Galicia para el mundo, Damn Small Linux, SliTaz (que cabe en 35 megas) y ttylinux (basado en línea de órdenes solo).
 
+
+###1º máquina virtual:
+
 Lo primero que hay que hacer es activar el módulo del kernel de VKM:
 
     sudo modprobe kvm-intel
     
-Vamos crear el disco:
+Vamos nos descargamos la imágen de http://www.slitaz.org/en/get/#stable y creamos el disco duro virtual:
 
-    qemu-img create -f qcow qcow2_disc.img 2G
+![pantallazo2](https://dl.dropbox.com/s/f0xpgi6kcmx53r3/pantallazo2.png)
+
+Y para finalizar: 
+
+    qemu-system-x86_64 -hda ./SliTar.img -cdrom slitaz-4.0.iso
+
+![panallazo3](https://dl.dropbox.com/s/vsdvim8p50mblwl/pantallazo3.png)
+
+
+###2º máquina virtual:
+
+
+Vamos a intalar Galpon mínimo, hecha en Galicia para el mundo, descargando la imágen en http://minino.galpon.org/descargas, y creamos el disco duro virtual:
+
+
+    qemu-img create -f raw galpon.img 100M
+    
+    qemu-system-x86_64 -hda ./SliTar.img -cdrom /Descargas/slitaz-4.0.iso
+
 
 
 
@@ -36,7 +57,17 @@ Instalamos VirtualBox con:
     
     apt-get install virtualbox
     
-Abrimos la aplicación, y vamos a instalar ubuntu server 12.04, en homanaje al gran resultado que obtube con esta versión en la pasada práctica 3:
+Abrimos la aplicación, y vamos a instalar SliTar:
+
+![pantallazo5](https://dl.dropbox.com/s/5vgq6ou34t22gvh/pantallazo5.png)
+
+![pantallazo6](https://dl.dropbox.com/s/qriyo6nn14w97e9/pantallazo6.png)
+
+![pantallazo7](https://dl.dropbox.com/s/7nqotzcn8fvxafr/pantallazo7.png)
+
+Y finalmente añadimos la ISO:
+
+![pantallazo8](https://dl.dropbox.com/s/z3no3jywx6snjfa/pantallazo8.png)
 
 
 
