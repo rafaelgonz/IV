@@ -48,7 +48,7 @@ Vamos a intalar Galpon mínimo, hecha en Galicia para el mundo, descargando la i
     
     qemu-system-x86_64 -hda ./SliTar.img -cdrom /Descargas/slitaz-4.0.iso
 
-
+![pantallazo4](https://dl.dropbox.com/s/u9rfa8xd95ip0jn/pantallazo4.png)
 
 
 ###2. Hacer un ejercicio equivalente usando otro hipervisor como Xen, VirtualBox o Parallels.
@@ -83,7 +83,7 @@ Para terminar, ejecutamos nuestra máquina virtual:
 ##Ejercicio4
 ###Crear una máquina virtual Linux con 512 megas de RAM y entorno gráfico LXDE a la que se pueda acceder mediante VNC y ssh
 
-Voy a usar una imágen algo antigua de linux mint que tengo de haberla instalado antiguamente a mi netbook, de modo que hacemos lo siguiente:
+Voy a usar una imágen algo antigua de lubuntu 12.05, de modo que hacemos lo siguiente:
 
 Creamos la máquina con virtualbox:
 
@@ -95,8 +95,15 @@ Y nos conectamos por ssh, preparando la máquina virtual:
 
 Y finalmente:
 
-    ssh -p 2222 mint@localhost
+    ssh -p 2222 lubuntu@localhost
     
 
 ##Ejercicio5
-###
+###Crear una máquina virtual ubuntu e instalar en ella un servidor nginx para poder acceder mediante web.
+
+Instalamos una máquina ubuntu server 12-04 mediante Virtual Box
+
+
+Lo siguiente es instalar nginx:
+
+    sudo apt-get install nginx
