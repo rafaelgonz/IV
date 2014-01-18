@@ -101,19 +101,53 @@ Y finalmente:
 ##Ejercicio5
 ###Crear una máquina virtual ubuntu e instalar en ella un servidor nginx para poder acceder mediante web.
 
-Instalamos una máquina ubuntu server 12-04 mediante Virtual Box
+Instalamos una máquina ubuntu server 12-04 mediante windows azure, con un núcleo y 1,75 GB de memoria:
+ 
+![pantallazo12](https://dl.dropbox.com/s/slczqwql5e7bhpb/pantallazo1.png)
 
+Y nos conectamos por ssh:
 
-Lo siguiente es instalar nginx:
+![pantallazo13](https://dl.dropbox.com/s/bweeonagdgy06h5/pantallazo3.png)
 
-    sudo apt-get install nginx
+Instalamos nginx mediante:
+
+    sudo apt-get isntall ngingx
+
+Reiniciamos el servicio:
+
+    sudo service nginx restart
+
+Añadimos un extremo en azure:
+
+![pantallazo15](https://dl.dropbox.com/s/ox3j6z8pr8950dl/pantallazo15.png)
     
-Y accedemos a la página por defecto que tiene nginx:
+Y comprobamos que funciona:
 
-![pantallazo12](https://dl.dropbox.com/s/lsysdnrwmqxwciv/pantallazo12.png)
+http://ivubuntu.cloudapp.net
+
+![pantallazo16](https://dl.dropbox.com/s/xv97us1daquudzq/pantallazo16.png)
 
 
 ##Ejercicio6
 ###Usar juju para hacer el ejercicio anterior.
 
+Comenzamos con:
 
+    sudo juju init
+
+Y creamos lo siguiente:
+    
+    openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout azure.pem -out azure.pem
+    openssl x509 -inform pem -in azure.pem -outform der -out azure.cer
+    chmod 600 azure.pem
+    
+
+El management-subscription-id se conoce utilizando el siguiente comando:
+
+    azure account list
+
+Para subir el certificado, nos vamos a la sección "CONFIGURACIÓN" y una vez dentro a "CERTIFICADOS DE ADMINISTRACIÓN", pulsamos el botón de la parte inferior "CARGAR" y seleccionamos el nuestro archivo "azure.cer". 
+
+Una vez hecho esto, editamos el archivo ~/.juju/environments.yaml introduciendo los valores azure account storage list y azure account list:
+
+![pantallazo1]()
