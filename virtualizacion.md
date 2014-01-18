@@ -75,4 +75,28 @@ Para terminar, ejecutamos nuestra máquina virtual:
 
 
 
+##Ejercicio3
+###Crear un benchmark de velocidad de entrada salida y comprobar la diferencia entre usar paravirtualización y arrancar la máquina virtual simplemente con qemu-system-x86_64 -hda /media/Backup/Isos/discovirtual.img
 
+
+
+##Ejercicio4
+###Crear una máquina virtual Linux con 512 megas de RAM y entorno gráfico LXDE a la que se pueda acceder mediante VNC y ssh
+
+Voy a usar una imágen algo antigua de linux mint que tengo de haberla instalado antiguamente a mi netbook, de modo que hacemos lo siguiente:
+
+Creamos la máquina con virtualbox:
+
+![pantallazo10](https://dl.dropbox.com/s/63oxvbsmy5sm9er/pantallazo10.png)
+
+Y nos conectamos por ssh, preparando la máquina virtual:
+
+![pantallazo11](https://dl.dropbox.com/s/464jh9hb2d40pgl/pantallazo11.png)
+
+Y finalmente:
+
+    ssh -p 2222 mint@localhost
+    
+
+##Ejercicio5
+###
