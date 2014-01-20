@@ -141,16 +141,40 @@ Y creamos lo siguiente:
     openssl x509 -inform pem -in azure.pem -outform der -out azure.cer
     chmod 600 azure.pem
     
+![pantallazojuju](https://dl.dropbox.com/s/omjib7cdadbxe45/pantallazojuju.png)
 
-El management-subscription-id se conoce utilizando el siguiente comando:
+Para editar environmets.yaml, vamos a buscar los siguientes datos que necesitamos:
+
+* El management-subscription-id se conoce utilizando el siguiente comando:
 
     azure account list
 
+![pantallazojuju2](https://dl.dropbox.com/s/6k9xkdbrygg0rdy/pantallazojuju2.png)   
+    
+* El storage-account-name:
+
+    azure storage account list
+    
+![pantallazojuju3](https://dl.dropbox.com/s/bdz4xca4bugsfd4/pantallazojuju3.png)
+
+Y editamos dicho fichero, quedando de la siguiente forma:
+
+![pantallazojuju5](https://dl.dropbox.com/s/k53udyaoxqa6wud/pantallazojuju5.png)
+
+
 Para subir el certificado, nos vamos a la sección "CONFIGURACIÓN" y una vez dentro a "CERTIFICADOS DE ADMINISTRACIÓN", pulsamos el botón de la parte inferior "CARGAR" y seleccionamos el nuestro archivo "azure.cer". 
 
-Una vez hecho esto, editamos el archivo ~/.juju/environments.yaml introduciendo los valores azure account storage list y azure account list:
+![pantallazojuju4](https://dl.dropbox.com/s/b0nkdgpp78ox0fb/pantallazojuju4.png)
 
-![pantallazoJuju]()
+Llegados a este punto, creamos un taper para instalar los servicios dentro de el:
+
+    sudo juju switch azure
+    sudo juju bootstrap
+    sudo juju deploy --to 0 juju-gui
+    sudo juju expose juju-gui
+
+Una vez echo esto, obtenemos el enlace con juju status:
+
 
 
 ##Ejercicio7
