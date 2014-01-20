@@ -150,4 +150,22 @@ Para subir el certificado, nos vamos a la sección "CONFIGURACIÓN" y una vez de
 
 Una vez hecho esto, editamos el archivo ~/.juju/environments.yaml introduciendo los valores azure account storage list y azure account list:
 
-![pantallazo1]()
+![pantallazoJuju]()
+
+
+##Ejercicio7
+###Instalar una máquina virtual Ubuntu 12.04 para el hipervisor que tengas instalado.
+
+Primero instalamos los siguientes paquetes:
+
+    sudo apt-get install ubuntu-vm-builder kvm virt-manager
+
+Y ahora decimos la distribución, destino, nombre... mediante:
+
+    sudo vmbuilder kvm ubuntu --suite precise --flavour server -o --dest ~/iv --hostname rafael --domain rafael 
+
+![pantallazo17](https://dl.dropbox.com/s/stfixa7nt4lu6jv/pantallazo17.png)
+
+Y ahora, vamos a virtualBox, creamos una máquina, y cuando lleguemos a la fase donde elegimos el disco, seleccionamos lo creado anteriormente:
+
+![pantallazo18](https://dl.dropbox.com/s/by11pjbc8o00pps/pantallazo18.png)
