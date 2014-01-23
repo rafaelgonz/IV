@@ -11,5 +11,16 @@ Y una vez instalado:
   
 
 ##Ejercicio2
-###rear una receta para instalar nginx, tu editor favorito y algún directorio y fichero que uses de forma habitual.
+###Crear una receta para instalar nginx, tu editor favorito y algún directorio y fichero que uses de forma habitual.
+
+Creamos el fichero ej2.rb, que contendrá para realizar correctamente el ejercicio, lo siguiente:
+
+
+Y ejecutamos chef-apply ej2.rb:
+
+![pantallazo1]()
+
+Ahora añadimos lo necesario para instalar nginx y un editor:
+
+
 
