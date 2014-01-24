@@ -42,8 +42,9 @@ Añadimos los paquetes de geany y nginx, tal y como nos pide el ejercicio,  volv
         
         JSON { 'uno': 'dos', 'tres': [ 4, 5, 'Seis', { 'siete': 8, 'nueve': [Object] } ] }
     
+    
 YAML es un formato de serialización de datos legible por humanos inspirado en lenguajes como XML, C, Python, Perl, así como el formato para correos electrónicos especificado por el RFC 2822. YAML fue propuesto por Clark Evans en 2001, quien lo diseñó junto a Ingy döt Net y Oren Ben-Kiki.
 
-YAML es un acrónimo recursivo que significa "YAML Ain't Another Markup Language (en castellano, "YAML no es otro lenguaje de marcado"). A comienzos de su desarrollo, YAML significaba "Yet Another Markup Language" ("Otro lenguaje de marcado más") para distinguir su propósito centrado en los datos en lugar del marcado de documentos. Sin embargo, dado que se usa frecuentemente XML para serializar datos y XML es un auténtico lenguaje de marcado de documentos, es razonable considerar YAML como un lenguaje de marcado ligero.
+YAML es un acrónimo recursivo que significa "YAML Ain't Another Markup Language (en castellano, "YAML no es otro lenguaje de marcado"). A comienzos de su desarrollo, YAML significaba "Yet Another Markup Language"  para distinguir su propósito centrado en los datos en lugar del marcado de documentos. Sin embargo, dado que se usa frecuentemente XML para serializar datos y XML es un auténtico lenguaje de marcado de documentos, es razonable considerar YAML como un lenguaje de marcado ligero.
     
-[Fuente](http://es.wikipedia.org/wiki/YAML)
+[Fuente: Wikipedia](http://es.wikipedia.org/wiki/YAML)
