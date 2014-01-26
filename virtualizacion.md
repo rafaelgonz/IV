@@ -87,16 +87,39 @@ Voy a usar una imágen algo antigua de lubuntu 12.05, de modo que hacemos lo sig
 
 Creamos la máquina con virtualbox:
 
+    qemu-img create -f qcow2 lubuntu.img 15G
+    qemu-system-x86_64 -hda ~/qemu/lubuntu.img -cdrom ~/qemu/lubuntu-12.04-desktop-i386.iso -m 512M
+
 ![pantallazo10](https://dl.dropbox.com/s/63oxvbsmy5sm9er/pantallazo10.png)
 
-Y nos conectamos por ssh, preparando la máquina virtual:
+Instalamos lubuntu en el sistema (pudo tardar hora y media en instalarse...), y arrancamos dentro de VNC:
+
+    qemu-system-x86_64 -boot order=c -drive file=lubuntu.img,if=virtio -m 512M -name lubuntu -vnc :1
+    
+Luego instalamos un cliente VNC, por ejemplo Vinage, mediante:
+
+    sudo apt-get install vinagre
+    
+Y seguidamente, miramos la interfaz NAT para conectarnos, con ifconfig virbr0, y nos conectamos a la máquina, mediante:
+
+    vinagre 192.168.122.1:5901 &
 
 ![pantallazo11](https://dl.dropbox.com/s/464jh9hb2d40pgl/pantallazo11.png)
 
-Y finalmente:
 
-    ssh -p 2222 lubuntu@localhost
+---
+
+Para conectarnos con ssh, iniciamos la máquina, mediante:
+
+    qemu-system-x86_64 -boot order=c -drive file=lubuntu.img,if=virtio -m 512M -name lubuntu -redir tcp:2222::22
     
+Y en otro terminal:
+
+    ssh -p 2222 rafael@localhost
+    
+![pantallazo11b]()
+
+
 
 ##Ejercicio5
 ###Crear una máquina virtual ubuntu e instalar en ella un servidor nginx para poder acceder mediante web.
@@ -130,6 +153,7 @@ http://ivubuntu.cloudapp.net
 
 ##Ejercicio6
 ###Usar juju para hacer el ejercicio anterior.
+
 
 Comenzamos con:
 
@@ -173,9 +197,13 @@ Llegados a este punto, creamos un taper para instalar los servicios dentro de el
     sudo juju deploy --to 0 juju-gui
     sudo juju expose juju-gui
 
-Una vez echo esto, obtenemos el enlace con juju status:
+Nos metemos en la web que nos ofrece juju status, que en mi caso es:
+(La contraseña, viene en environments.yaml, como admin-secret)
+
+De modo que introducimos en el buscador nginx y pinchamos en añadir, y ya lo tendremos.
 
 
+![pantallazojuju5](https://dl.dropbox.com/s/k53udyaoxqa6wud/pantallazojuju5.png)
 
 ##Ejercicio7
 ###Instalar una máquina virtual Ubuntu 12.04 para el hipervisor que tengas instalado.
