@@ -94,7 +94,7 @@ Creamos la máquina con virtualbox:
 
 Instalamos lubuntu en el sistema (pudo tardar hora y media en instalarse...), y arrancamos dentro de VNC:
 
-    qemu-system-x86_64 -boot order=c -drive file=lubuntu.img,if=virtio -m 512M -name lubuntu -vnc :1
+    qemu-system-x86_64 -boot order=c -drive file=~/lubuntu.img,if=virtio -m 512M -name lubuntu -vnc :1
     
 Luego instalamos un cliente VNC, por ejemplo Vinage, mediante:
 
