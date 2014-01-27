@@ -78,8 +78,51 @@ Para terminar, ejecutamos nuestra máquina virtual:
 ##Ejercicio3
 ###Crear un benchmark de velocidad de entrada salida y comprobar la diferencia entre usar paravirtualización y arrancar la máquina virtual simplemente con qemu-system-x86_64 -hda /media/Backup/Isos/discovirtual.img
 
+Para este ejercicio, he reciclado, un benchmark en c++ que había echo el año pasado:
 
+    #include <iostream>
+    #include <cmath>
+    
+    using namespace std;
+    
+    void proceso(void) {
+    	
+    	unsigned int i=0;
+    	unsigned int j=0;
+    	unsigned int k=0;
+    	
+    	for(i=0; i<10000; i++){
+    		for(j=0; j<10000; j++){
+    			k*=13; k/=11;
+    		}
+    	}
+    }
+    
+    int main(int argc, char **argv) {
+    	
+    	double inicio, fin;
+    	
+    	inicio = clock();
+    	proceso();
+    	fin = clock();
+    	
+    	double resultado = fin - inicio;
+    	cout << "El tiempo es: " << resultado << endl;
+    	
+    	return 0;
+    }
 
+De modo, que vamos a ejecutarlo primero en lubuntu (512 MB) de virtualbox, y luego en la máquina lubuntu (512 MB( que hemos creado para el ejercicio4:
+
+* Lubuntu - Virtualbox
+
+![pantallazo](https://dl.dropbox.com/s/pag964dds7qylpo/pantallazo31.png)
+
+* Lubuntu - QEMU
+
+![pantallazo](https://dl.dropbox.com/s/51ejzlecqotvigx/pantallazo32.png)
+
+En mi opinión, es más eficiente y he obtenido mejores resultados con la máquina de virtual box.
 
 
 ##Ejercicio4
