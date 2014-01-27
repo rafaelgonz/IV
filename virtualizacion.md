@@ -228,7 +228,7 @@ Para editar environmets.yaml, vamos a buscar los siguientes datos que necesitamo
 
 Y editamos dicho fichero, quedando de la siguiente forma:
 
-![pantallazojuju5](https://dl.dropbox.com/s/k53udyaoxqa6wud/pantallazojuju5.png)
+![pantallazojuju7]()
 
 
 Para subir el certificado, nos vamos a la sección "CONFIGURACIÓN" y una vez dentro a "CERTIFICADOS DE ADMINISTRACIÓN", pulsamos el botón de la parte inferior "CARGAR" y seleccionamos el nuestro archivo "azure.cer". 
@@ -251,6 +251,8 @@ De modo que introducimos en el buscador nginx y pinchamos en añadir, y ya lo te
 
 
 ![pantallazojuju5](https://dl.dropbox.com/s/k53udyaoxqa6wud/pantallazojuju5.png)
+
+
 
 ##Ejercicio7
 ###Instalar una máquina virtual Ubuntu 12.04 para el hipervisor que tengas instalado.
