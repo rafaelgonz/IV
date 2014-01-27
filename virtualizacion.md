@@ -80,6 +80,8 @@ Para terminar, ejecutamos nuestra máquina virtual:
 
 
 
+
+
 ##Ejercicio4
 ###Crear una máquina virtual Linux con 512 megas de RAM y entorno gráfico LXDE a la que se pueda acceder mediante VNC y ssh
 
@@ -111,13 +113,12 @@ Y seguidamente, miramos la interfaz NAT para conectarnos, con ifconfig virbr0, y
 
 Para conectarnos con ssh, iniciamos la máquina, mediante:
 
-    qemu-system-x86_64 -boot order=c -drive file=lubuntu.img,if=virtio -m 512M -name lubuntu -redir tcp:2222::22
+    qemu-system-x86_64 -boot order=c -drive file=~/lubuntu.img,if=virtio -m 512M -name lubuntu -redir tcp:2222::22
     
 Y en otro terminal:
 
     ssh -p 2222 rafael@localhost
     
-![pantallazo11b]()
 
 
 
@@ -154,6 +155,7 @@ http://ivubuntu.cloudapp.net
 ##Ejercicio6
 ###Usar juju para hacer el ejercicio anterior.
 
+He sacado los contenidos de: http://askubuntu.com/questions/288769/how-do-i-configure-juju-for-use-on-azure
 
 Comenzamos con:
 
@@ -197,8 +199,10 @@ Llegados a este punto, creamos un taper para instalar los servicios dentro de el
     sudo juju deploy --to 0 juju-gui
     sudo juju expose juju-gui
 
-Nos metemos en la web que nos ofrece juju status, que en mi caso es:
+Nos metemos en la web que nos ofrece juju status,y nos identificamos:
 (La contraseña, viene en environments.yaml, como admin-secret)
+
+![pantallazojuju6](https://dl.dropbox.com/s/mfs9ixby194ws1w/pantallazojuju6.png)
 
 De modo que introducimos en el buscador nginx y pinchamos en añadir, y ya lo tendremos.
 
