@@ -43,8 +43,31 @@ Añadimos los paquetes de geany y nginx, tal y como nos pide el ejercicio,  volv
         JSON { 'uno': 'dos', 'tres': [ 4, 5, 'Seis', { 'siete': 8, 'nueve': [Object] } ] }
     
     
-YAML es un formato de serialización de datos legible por humanos inspirado en lenguajes como XML, C, Python, Perl, así como el formato para correos electrónicos especificado por el RFC 2822. YAML fue propuesto por Clark Evans en 2001, quien lo diseñó junto a Ingy döt Net y Oren Ben-Kiki.
+YAML es un formato de serialización de datos legible por humanos inspirado en lenguajes como XML, C, Python, Perl, así como el formato para correos electrónicos especificado por el RFC 2822. 
 
-YAML es un acrónimo recursivo que significa "YAML Ain't Another Markup Language (en castellano, "YAML no es otro lenguaje de marcado"). A comienzos de su desarrollo, YAML significaba "Yet Another Markup Language"  para distinguir su propósito centrado en los datos en lugar del marcado de documentos. Sin embargo, dado que se usa frecuentemente XML para serializar datos y XML es un auténtico lenguaje de marcado de documentos, es razonable considerar YAML como un lenguaje de marcado ligero.
+A comienzos de su desarrollo, YAML significaba "Yet Another Markup Language"  para distinguir su propósito centrado en los datos en lugar del marcado de documentos. Sin embargo, dado que se usa frecuentemente XML para serializar datos y XML es un auténtico lenguaje de marcado de documentos, es razonable considerar YAML como un lenguaje de marcado ligero.
     
 [Fuente: Wikipedia](http://es.wikipedia.org/wiki/YAML)
+
+    --- # 
+      tres:
+        - 4
+        - 5
+        - "Seis"
+        -
+          siete: 8
+          nueve:
+            - "Object"
+      uno: "dos"
+    
+    ---
+    
+
+##Ejercicio4
+###Desplegar los fuentes de la aplicación de DAI o cualquier otra aplicación que se encuentre en un servidor git público en la máquina virtual Azure (o una máquina virtual local) usando ansible.
+
+Comenzamos creando una máquina virtual en azure, para poder instalar allí todo lo que necesitamos para ejecutar nuestra aplicación de DAI, que se puede descargar en el siguiente enlace:
+
+[Práctica DAI](https://www.dropbox.com/sh/zoqse981o6dp94w/rC3tLxIsRP)
+
+![pantallazo3](https://dl.dropbox.com/s/x9rxg9vchegu2r4/pantallazo3.png)
