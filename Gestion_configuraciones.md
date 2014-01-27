@@ -71,3 +71,17 @@ Comenzamos creando una máquina virtual en azure, para poder instalar allí todo
 [Práctica DAI](https://www.dropbox.com/sh/zoqse981o6dp94w/rC3tLxIsRP)
 
 ![pantallazo3](https://dl.dropbox.com/s/x9rxg9vchegu2r4/pantallazo3.png)
+
+Nos metemos por SSH, e instalamos ansible:
+
+1.  Instalamos su repositorio:
+
+        sudo add-apt-repository ppa:rquillo/ansible
+    
+2.  Terminamos la instalación:
+
+        sudo apt-get update
+        sudo apt-get install ansible
+        
+Una vez llegados a este punto,
+
