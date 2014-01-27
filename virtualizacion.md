@@ -226,10 +226,6 @@ Para editar environmets.yaml, vamos a buscar los siguientes datos que necesitamo
     
 ![pantallazojuju3](https://dl.dropbox.com/s/bdz4xca4bugsfd4/pantallazojuju3.png)
 
-Y editamos dicho fichero, quedando de la siguiente forma:
-
-![pantallazojuju7]()
-
 
 Para subir el certificado, nos vamos a la sección "CONFIGURACIÓN" y una vez dentro a "CERTIFICADOS DE ADMINISTRACIÓN", pulsamos el botón de la parte inferior "CARGAR" y seleccionamos el nuestro archivo "azure.cer". 
 
