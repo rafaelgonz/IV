@@ -178,4 +178,10 @@ Y ya tenemos la máquina funcionando, y nos conectamos por ssh:
 
 
 ##Ejercicio7
-###
+###Crear un script para provisionar `nginx` o cualquier otro servidor web que pueda ser útil para alguna otra práctica.
+
+
+##Ejercicio8
+###Configurar tu máquina virtual usando vagrant con el provisionador ansible.
+
+
