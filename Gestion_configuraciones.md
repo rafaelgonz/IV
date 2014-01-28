@@ -68,11 +68,11 @@ A comienzos de su desarrollo, YAML significaba "Yet Another Markup Language"  pa
 
 Comenzamos creando una máquina virtual en azure, para poder instalar allí todo lo que necesitamos para ejecutar nuestra aplicación de DAI, que se puede descargar en el siguiente enlace:
 
-[Práctica DAI](https://www.dropbox.com/sh/zoqse981o6dp94w/rC3tLxIsRP)
+[Práctica DAI](https://github.com/rafaelgonz/DAI.git)
 
 ![pantallazo3](https://dl.dropbox.com/s/x9rxg9vchegu2r4/pantallazo3.png)
 
-Nos metemos por SSH, e instalamos ansible:
+Ahora en nuestra máquina local, instalamos ansible:
 
 1.  Instalamos su repositorio:
 
@@ -83,5 +83,71 @@ Nos metemos por SSH, e instalamos ansible:
         sudo apt-get update
         sudo apt-get install ansible
         
-Una vez llegados a este punto,
+Una vez llegados a este punto, instalamos git en la máquina azure, mediante:
 
+    sudo apt-get install git
+
+En nuestra máquina local, creamos el fichero ansible_hosts e introducimos lo siguiente:
+
+    [azure]
+    rafaelDAI.cloudapp.net
+
+Así que ya sólo queda descargar el repositorio mediante ansible, de la siguiente manera:
+
+    
+1.  Exportamos el fichero creado anteriormente:
+
+        export ANSIBLE_HOSTS=~/ansible_hosts
+        
+2.  Desplegamos la aplicación:
+      
+        ansible azure -m git --ask-pass -u azureuser -a "repo=https://github.com/rafaelgonz/DAI.git dest=~/DAI version=HEAD"
+
+![pantallazo4](https://dl.dropbox.com/s/41p74sbfbtz5j4h/pantallazo4.png)
+
+Comprobamos que se ha realizado correctamente:
+
+![pantallazo5](https://dl.dropbox.com/s/qq0ag6kq5oe1zbs/pantallazo5.png)
+
+
+##Ejercicios5
+###Desplegar la aplicación de DAI con todos los módulos necesarios usando un playbook de Ansible.
+
+
+Para este ejercicio, creamos un fichero ej5.yml con la siguiente información:
+
+    ---
+    - hosts: azure
+      sudo: yes
+      tasks:
+        - name: librerias de Python y EasyInstall
+          apt: name=build-essential state=present
+          apt: name=python-dev state=present
+          apt: name=python-setuptools state=present
+        - name: bd de MongoDB
+          apt: name=mongodb-server state=present
+        - name: servicios de internet, css, webpy y mako
+          command: easy_install web.py mako pymongo feedparser tweepy 
+        - name: ejecutar
+          command: chdir=/home/DAI/Práctica4/ python formulario.py 8080 &
+          async: 50
+          poll: 0
+
+Y lo ejecutamos:
+
+    ansible-playbook ej5.yml -u azureuser --ask-pass
+    
+![pantallazo6](https://dl.dropbox.com/s/93s2aiomftp6i11/pantallazo6.png)
+
+
+###¿Ansible o Chef? ¿O cualquier otro que no hemos usado aquí?.
+
+En mi experiencia, puedo decir que me ha resultado más fácil, con más documentación, más flexible...  ya que chef sólo me dió problemas en los ejercicios que teníamos que hacer, y al contrario, con ansible no he tenido ningún problema.
+
+Y lo bonito que es... jejej 
+
+![pantallazo6](https://dl.dropbox.com/s/93s2aiomftp6i11/pantallazo6.png)
+
+
+##Ejercicio6
+###Instalar una máquina virtual Debian usando Vagrant y conectar con ella.
