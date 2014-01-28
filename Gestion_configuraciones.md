@@ -151,3 +151,31 @@ Y lo bonito que es... jejej
 
 ##Ejercicio6
 ###Instalar una máquina virtual Debian usando Vagrant y conectar con ella.
+
+Lo primero que hacemos es conseguir la distribución debian, con:
+
+    vagrant box add Debian https://dl.dropboxusercontent.com/s/xymcvez85i29lym/vagrant-debian-wheezy64.box
+    
+![pantallazo7](https://dl.dropbox.com/s/ql3x2m2vaqq17c2/pantallazo7.png)
+
+Todo ello proporcionado por [la web de vagrant](http://www.vagrantbox.es/)
+
+Ahora, cambiamos el fichero Vagrantfile para que arranque Debian, quedando de la siguiente manera:
+
+![pantallazo8](https://dl.dropbox.com/s/75nnt4qjo01jmwh/pantallazo8.png)
+
+Llegados a este punto, iniciamos vagrant con:
+
+    vagrant up
+    
+![pantallazo9](https://dl.dropbox.com/s/ccmhxwirc69rv2n/pantallazo9.png)
+
+Y ya tenemos la máquina funcionando, y nos conectamos por ssh:
+
+    vagrant ssh
+
+![pantallazo10]()
+
+
+##Ejercicio7
+###
