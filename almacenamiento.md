@@ -269,36 +269,25 @@ Y con esto, hemos subido archivos a la cuenta realizada en el ejercicio anterior
 ##Ejercicio10
 ###Desde un programa en Ruby o en algún otro lenguaje, listar los blobs que hay en un contenedor, crear un fichero con la lista de los mismos y subirla al propio contenedor. Muy meta todo.
 
-
-Instalamos el gem de ruby para azure:
-
-![pantallazo11](https://dl.dropbox.com/s/laju1tmfeofzk3q/pantallazoej10.png)
+Vamos a realizar el pequeño programa en python, cuyo código es el siguiente:
 
 
-Y realizamos el siguiente código:
-
-	#!/usr/bin/ruby
-	require "azure"
-
-	azure_blob_service = Azure::BlobService.new
-	containers = azure_blob_service.list_containers()
-
-	containers.each do |container|
-    		name = container.name + ".txt"
-
-		File.open(name, "w") do |list|
-
-        		list.puts container.name + ":"
-        		list.puts "=" * container.name.length
-
-			blobs = azure_blob_service.list_blobs(container.name)
-
-        		blobs.each do |blob|
-            			list.puts "\t" + blob.name
-        		end
-    		end
-
-    		content = File.open(name, "rb") { |file| file.read }
-    		blob = azure_blob_service.create_block_blob(container.name, name, content)
-
-	end
+	import credentials  
+	from azure.storage import BlobService
+	
+	
+	def getContainersWithBlobs(blob_service):
+	    
+	    #CONTENEDORES
+	    for i in blob_service.list_containers().containers:
+	        print("Contenedores:")
+	        print("Nombre: {}".format(i.name))
+	        print("Url: {}".format(i.url))
+	     
+	     	#BLOBS
+	        for j in blob_service.list_blobs(i.name).blobs:
+	            print("Blobs:")
+	            print("\tNombre {}".format(j.name))
+	            print("\tUrl: {}".format(j.url))
+	            print("\t------------------------------")
+	
