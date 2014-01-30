@@ -152,9 +152,12 @@ Y lo bonito que es... jejej
 ##Ejercicio6
 ###Instalar una máquina virtual Debian usando Vagrant y conectar con ella.
 
-Lo primero que hacemos es conseguir la distribución debian en [la web de vagrant](http://www.vagrantbox.es/):
+Estos ejercicios, los he realizado en mi modesto Dual-Core de 2G, con una instalación de ubuntu:
 
-    vagrant box add IVDebian https://dl.dropboxusercontent.com/u/67225617/lxc-vagrant/lxc-wheezy64-puppet3-2013-07-27.box
+
+Lo primero que hacemos es instalar vagrant y  conseguir la distribución debian en [la web de vagrant](http://www.vagrantbox.es/):
+
+    vagrant box add Debian2 http://tools.swergroup.com/downloads/wheezy32.box
     
 ![pantallazo7](https://dl.dropbox.com/s/ql3x2m2vaqq17c2/pantallazo7.png)
 
@@ -176,7 +179,7 @@ Ahora, cambiamos el fichero Vagrantfile, quedando de la siguiente manera:
         
           # The url from where the 'config.vm.box' box will be fetched if it
           # doesn't already exist on the user's system.
-          config.vm.box_url = "https://dl.dropboxusercontent.com/u/67225617/lxc-vagrant/lxc-wheezy64-puppet3-2013-07-27.box"
+          config.vm.box_url = "http://tools.swergroup.com/downloads/wheezy32.box"
         
           # Boot with a GUI so you can see the screen. (Default is headless)
           # config.vm.boot_mode = :gui
@@ -278,6 +281,17 @@ Y ya tenemos la máquina funcionando, y nos conectamos por ssh:
 
 ##Ejercicio7
 ###Crear un script para provisionar `nginx` o cualquier otro servidor web que pueda ser útil para alguna otra práctica.
+
+Lo que tendríamos que hacer, es volver a editar el fichero VagrantFile, indicandole, que queremos instalarle a nuestra máquina nginx, de modo que añadiríamos las siguientes líneas:
+
+    config.vm.instalacion "shell",
+    inline: "sudo apt-get update && sudo apt-get install -y nginx && sudo service nginx restart && sudo service nginx status"
+
+Y en el terminal:
+
+    vagrant instalacion
+    
+![pantallazo11]()
 
 
 ##Ejercicio8
