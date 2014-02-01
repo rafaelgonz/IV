@@ -154,6 +154,15 @@ Y lo bonito que es... jejej
 ###Instalar una máquina virtual Debian usando Vagrant y conectar con ella.
 
 
+Antes de nada, explicar que me topé con el error:
+
+    Failed to untar the box file. This is usually because you're
+    attempting to add a box that isn't a valid box file. Please
+    double check that the box file is properly packaged.
+
+El cuál resolví, 
+
+
 Lo primero que hacemos es instalar vagrant y  conseguir la distribución debian en [la web de vagrant](http://www.vagrantbox.es/), y:
 
     vagrant box add Debian2 http://tools.swergroup.com/downloads/wheezy32.box
