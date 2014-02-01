@@ -149,19 +149,19 @@ Y lo bonito que es... jejej
 ![pantallazo6](https://dl.dropbox.com/s/93s2aiomftp6i11/pantallazo6.png)
 
 
+
 ##Ejercicio6
 ###Instalar una máquina virtual Debian usando Vagrant y conectar con ella.
 
-Estos ejercicios, los he realizado en mi modesto Dual-Core de 2G, con una instalación de ubuntu:
 
-
-Lo primero que hacemos es instalar vagrant y  conseguir la distribución debian en [la web de vagrant](http://www.vagrantbox.es/):
+Lo primero que hacemos es instalar vagrant y  conseguir la distribución debian en [la web de vagrant](http://www.vagrantbox.es/), y:
 
     vagrant box add Debian2 http://tools.swergroup.com/downloads/wheezy32.box
     
 ![pantallazo7](https://dl.dropbox.com/s/ql3x2m2vaqq17c2/pantallazo7.png)
 
-Y:
+Y para crear el fichero de coniguración Vagrantfile:
+
     vagrant init IVDebian
 
 Ahora, cambiamos el fichero Vagrantfile, quedando de la siguiente manera:
@@ -297,4 +297,41 @@ Y en el terminal:
 ##Ejercicio8
 ###Configurar tu máquina virtual usando vagrant con el provisionador ansible.
 
+Lo primero es darle una dirección IP a nuestra máquina, mediante:
 
+    config.vm.network :private_network, ip: "192.168.2.50"
+    
+y recargamos la configuración del VagrantFile:
+
+    vagrant reload
+    
+Importamos la variable HOSTS, como hacíamos en los otros ejercicios de ansible (export ANSIBLE_HOSTS=~/ansible_hosts), y editamos el VagrantFile, quedando de la siguiente manera:
+
+    Vagrant.configure("2") do |config|
+      config.vm.box = "debian"
+      config.vm.network :private_network, ip: "192.168.2.50"
+    
+      config.vm.provision "ansible" do |ansible| 
+        ansible.playbook = "playbook.yml"
+      end
+    
+    end
+    
+Ahora, creamos un fichero playbook.yml, con el siguiente contenido:
+
+    ---
+    - hosts: vagrant
+      sudo: yes
+      tasks:
+        - name: Actualizar lista de paquetes
+          apt: update_cache=yes
+        - name: Instalar Nginx
+          apt: name=nginx state=present
+
+Básicamente, lo que hará es instalar nginx y actualizar la caché.
+
+Comprobamos que funciona:
+
+    vagrant provision
+
+![pantallazo]()
