@@ -171,13 +171,13 @@ Llegados a este punto, iniciamos vagrant con:
 
     vagrant up
     
-![pantallazo9](https://www.dropbox.com/s/tpf7i1at9tifav9/2.png)
+![pantallazo9](https://dl.dropbox.com/s/tpf7i1at9tifav9/2.png)
 
-Y ya tenemos la máquina funcionando, y nos conectamos por ssh:
+Y ya tenemos la máquina funcionando, y nos podemos conectar por ssh con:
 
     vagrant ssh
 
-![pantallazo10]()
+![pantallazo10](https://dl.dropbox.com/s/9qlty6v0j7mhp83/3.png)
 
 
 ##Ejercicio7
@@ -192,7 +192,7 @@ Y en el terminal:
 
     vagrant instalacion
     
-![pantallazo11]()
+![pantallazo11](https://dl.dropbox.com/s/4t162e10ztddlvr/4.png)
 
 
 ##Ejercicio8
@@ -229,10 +229,13 @@ Ahora, creamos un fichero playbook.yml, con el siguiente contenido:
         - name: Instalar Nginx
           apt: name=nginx state=present
 
-Básicamente, lo que hará es instalar nginx y actualizar la caché.
+Básicamente, lo que hará es instalar nginx y actualizar la caché, y a continuación:
 
-Comprobamos que funciona:
+
+    vagrant up
+    
+![pantallazo12]()
 
     vagrant provision
 
-![pantallazo]()
+![pantallazo13]()
