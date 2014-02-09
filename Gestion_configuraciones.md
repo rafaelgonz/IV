@@ -226,16 +226,15 @@ Ahora, creamos un fichero playbook.yml, con el siguiente contenido:
       tasks:
         - name: Actualizar lista de paquetes
           apt: update_cache=yes
-        - name: Instalar Nginx
+        - name: Instalar el servidor Nginx
           apt: name=nginx state=present
+        - name: Arrancando el servidor NGINX
+          action: shell service nginx start
 
 Básicamente, lo que hará es instalar nginx y actualizar la caché, y a continuación:
 
-
-    vagrant up
-    
-![pantallazo12]()
-
     vagrant provision
+    
+![pantallazo12](https://dl.dropbox.com/s/7grt6f55xkz02g2/5.png)
 
-![pantallazo13]()
+
