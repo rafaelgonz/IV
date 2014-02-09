@@ -200,7 +200,7 @@ Y en el terminal:
 
 Lo primero es darle una dirección IP a nuestra máquina, mediante:
 
-    config.vm.network :private_network, ip: "192.168.2.50"
+    config.vm.network :private_network, ip: "192.168.33.11"
     
 y recargamos la configuración del VagrantFile:
 
@@ -210,7 +210,7 @@ Importamos la variable HOSTS, como hacíamos en los otros ejercicios de ansible 
 
     Vagrant.configure("2") do |config|
       config.vm.box = "debian"
-      config.vm.network :private_network, ip: "192.168.2.50"
+      config.vm.network :private_network, ip: "192.168.33.11"
     
       config.vm.provision "ansible" do |ansible| 
         ansible.playbook = "playbook.yml"
